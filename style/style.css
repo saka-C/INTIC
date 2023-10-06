@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+
+
+:root{
+    /* Color */
+    --body-color: #F0F0F0;
+    --text-light-color: #ffff;
+    --primary-color: #3085C3;
+    --primary-color-light: #FAFAFA;
+    --primary-color-light-2: #E0E0E0;
+    --color-shadow: rgba(0, 0, 0, 0.25);
+    --text-color: #292A2A;
+
+    /* transition */
+    --tran-01: all 0.1s ease;
+    --tran-02: all 0.2s ease;
+    --tran-03: all 0.3s ease;
+    --tran-04: all 0.4s ease;
+    --tran-05: all 0.5s ease;
+
+
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background-color: var(--body-color);
+}
+.container-header {
+    width: 100%;
+    height: 360px; /* Atur tinggi kontainer sesuai kebutuhan Anda */
+    background-image: url('../asset/background-fakultas.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navlink{
+    padding: 20px;
+}
+.navlink a{
+    background-color: var(--primary-color);
+    color: var(--body-color);
+    font-weight: 700;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+.logo .logo-image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.logo p{
+    background-color: var(--primary-color);
+    color: var(--primary-color);
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.logo .logo-text{
+    color: var(--body-color);
+    font-weight: 700;
+    font-size: 12px;
+}
+.text-header {
+    position: absolute;
+    top: 150px; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    text-align: center;
+    font-weight: 700; 
+    color: var(--body-color); 
+    font-size: 20px;
+    width: 50%;
+    font-weight: 700;
+}
+.text-header h1{
+    font-size: 3vw; 
+}
+.garis{
+    display: flex;
+    justify-content: center;
+    margin-top: -50px;
+    background-color: var(--primary-color);
+    height: 100px;
+    border-radius: 50px 50px 0px 0px;
+}
+.garis .opacity{
+    opacity: 0;
+}
+.garis .card{
+    margin-top: -50px;
+    display: flex;
+    gap: 71px;
+}
+.garis a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: var(--text-color);
+    background-color: var(--body-color);
+    width: 172px;
+    height: 172px;
+    border-radius: 30px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 15px;
+    box-shadow: 0px 4px 4px 0px var(--color-shadow);
+}
+.garis a i{
+    font-size: 50px;
+}
+@media screen and (max-width: 760px){
+    .text-header{
+        width: 60%;
+        top: 150px;
+    }
+    .text-header h1{
+        font-size: 5vw; 
+    }
+    .garis .card{
+        top: 30%;
+        gap: 40px;
+    }
+    .garis a{
+        width: 142px;
+        height: 142px;
+    }
+    .garis{
+        height: 100px;
+    }
+}
+@media screen and (max-width: 515px){
+    .garis .card{
+        gap: 20px;
+    }
+    .garis a{
+        border-radius: 15px;
+        width: 90px;
+        height: 90px;
+        font-size: 2vw;
+    }
+    .garis{
+        height: 50px;
+        border-radius: 30px 30px 0px 0px;
+    }
+}
+.thumbnail{
+    display: flex;
+    justify-content: center;
+    margin-top: 84px;
+    gap: 50px;
+}
+.thumbnail-img img{
+    width: 50%;
+}
+.thumbnail-img img{
+    width: 100%;
+}
+.thumbnail-text{
+    width: 40%;
+    color: var(--text-color);
+}
+.thumbnail-text h2{
+    font-size: 32px;
+}
+.thumbnail-text p{
+    margin-bottom: 20px;
+}
+.thumbnail-text a{
+    background-color: var(--primary-color);
+    color: var(--body-color);
+    font-weight: 700;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 20px;
+}
+@media screen and (max-width: 760px){
+    .thumbnail{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .thumbnail-img img{
+        width: 70%;
+    }
+    .thumbnail-text{
+        width: 100%;
+    }
+}
+.antrian{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}
+.table-container {
+    max-height: 400px; 
+    overflow-y: auto; 
+    overflow-x: auto;
+    background-color: var(--body-color);
+    box-shadow: 0px 4px 4px 0px var(--color-shadow);
+    padding: 20px;
+    width: 100%;
+    border-radius: 15px;
+}
+.table-container h1{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.table-container table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.table-container tbody tr:nth-child(odd) {
+    background-color: var(--body-color); 
+}
+
+.table-container tbody tr:nth-child(even) {
+    background-color: var(--primary-color-light-2); 
+}
+
+.table-container tbody tr:hover {
+    cursor: pointer;
+    background-color: #a0a0a0; /* Warna latar belakang saat baris dihover */
+}
+
+.table-container td {
+    padding: 8px; /* Ruang dalam sel */
+    text-align: center; /* Pusatkan teks dalam sel */
+}
+
+
+/* Style untuk scroller horizontal */
+.table-container::-webkit-scrollbar {
+width: 12px; /* Lebar scroller */
+height: 12px; /* Tinggi scroller */
+}
+
+/* Style untuk badan scroller horizontal */
+.table-container::-webkit-scrollbar-thumb {
+background-color: var(--primary-color-light-2); /* Warna badan scroller */
+border-radius: 6px; /* Bentuk badan scroller */
+}
+
+/* Style untuk scroller vertikal */
+.table-container::-webkit-scrollbar-vertical {
+width: 12px; /* Lebar scroller */
+height: 12px; /* Tinggi scroller */
+}
+
+/* Style untuk badan scroller vertikal */
+.table-container::-webkit-scrollbar-thumb:vertical {
+background-color: var(--primary-color-light-2); /* Warna badan scroller */
+border-radius: 6px; /* Bentuk badan scroller */
+}
+
+/* Style untuk scroller saat dihover */
+.table-container::-webkit-scrollbar-thumb:hover {
+background-color: var(--primary-color-light-2); /* Warna badan scroller saat dihover */
+}
+@media screen and (max-width: 760px){
+    .antrian{
+        flex-direction: column;
+    }
+    .antrian-image{
+        display: none;
+    }
+}
