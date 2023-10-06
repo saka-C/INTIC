@@ -3,7 +3,34 @@
 html {
     scroll-behavior: smooth;
 }
+/* Style untuk scroller horizontal */
+html::-webkit-scrollbar{
+width: 12px; /* Lebar scroller */
+height: 12px; /* Tinggi scroller */
+}
 
+/* Style untuk badan scroller horizontal */
+html::-webkit-scrollbar-thumb {
+background-color: var(--primary-color-light-2); /* Warna badan scroller */
+border-radius: 6px; /* Bentuk badan scroller */
+}
+
+/* Style untuk scroller vertikal */
+html::-webkit-scrollbar-vertical{
+width: 12px; /* Lebar scroller */
+height: 12px; /* Tinggi scroller */
+}
+
+/* Style untuk badan scroller vertikal */
+html::-webkit-scrollbar-thumb:vertical  {
+background-color: var(--primary-color-light-2); /* Warna badan scroller */
+border-radius: 6px; /* Bentuk badan scroller */
+}
+
+/* Style untuk scroller saat dihover */
+html::-webkit-scrollbar-thumb:hover{
+background-color: var(--primary-color-light-2); /* Warna badan scroller saat dihover */
+}
 :root{
     /* Color */
     --body-color: #fafdff;
@@ -305,12 +332,18 @@ nav{
     border-radius: 10px;
     padding: 20px;
 }
+@media (max-width:800px){
+    .notification-container{
+        flex-direction: column;
+    }
+}
 .recived-container,
 .complete-container{
     width: 100%;
 }
 .table-received,
-.table-complete {
+.table-complete,
+.ticket-progress {
     max-height: 400px; 
     overflow-y: auto; 
     overflow-x: auto;
@@ -328,18 +361,18 @@ nav{
     font-size: 12px;
 }
 .table-received tbody tr:nth-child(odd),
-.table-complete tbody tr:nth-child(odd) {
+.table-complete tbody tr:nth-child(odd),
+.ticket-progress tbody tr:nth-child(odd){
     background-color: var(--body-color); 
 }
 
 .table-received tbody tr:nth-child(even),
-.table-complete tbody tr:nth-child(even) {
+.table-complete tbody tr:nth-child(even),
+.ticket-progress tbody tr:nth-child(even) {
     background-color: var(--primary-color-light-2); 
 }
 
-.table-received tbody tr:hover,
-.table-complete tbody tr:hover {
-    cursor: pointer;
+.table-received tbody tr:hover {
     background-color: #c5c5c5; /* Warna latar belakang saat baris dihover */
 }
 
@@ -357,39 +390,45 @@ nav{
     color: var(--text-light-color);
     border: none;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 /* Style untuk scroller horizontal */
 .table-received::-webkit-scrollbar,
-.table-complete::-webkit-scrollbar {
+.table-complete::-webkit-scrollbar,
+.ticket-progress::-webkit-scrollbar {
 width: 12px; /* Lebar scroller */
 height: 12px; /* Tinggi scroller */
 }
 
 /* Style untuk badan scroller horizontal */
 .table-received::-webkit-scrollbar-thumb,
-.table-complete::-webkit-scrollbar-thumb {
+.table-complete::-webkit-scrollbar-thumb,
+.ticket-progress::-webkit-scrollbar-thumb {
 background-color: var(--primary-color-light-2); /* Warna badan scroller */
 border-radius: 6px; /* Bentuk badan scroller */
 }
 
 /* Style untuk scroller vertikal */
 .table-received::-webkit-scrollbar-vertical,
-.table-complete::-webkit-scrollbar-vertical {
+.table-complete::-webkit-scrollbar-vertical,
+.ticket-progress::-webkit-scrollbar-vertical {
 width: 12px; /* Lebar scroller */
 height: 12px; /* Tinggi scroller */
 }
 
 /* Style untuk badan scroller vertikal */
 .table-received::-webkit-scrollbar-thumb:vertical ,
-.table-complete::-webkit-scrollbar-thumb:vertical {
+.table-complete::-webkit-scrollbar-thumb:vertical,
+.ticket-progress::-webkit-scrollbar-thumb:vertical{
 background-color: var(--primary-color-light-2); /* Warna badan scroller */
 border-radius: 6px; /* Bentuk badan scroller */
 }
 
 /* Style untuk scroller saat dihover */
-.table-received::-webkit-scrollbar-thumb:hover 
-.table-complete::-webkit-scrollbar-thumb:hover {
+.table-received::-webkit-scrollbar-thumb:hover, 
+.table-complete::-webkit-scrollbar-thumb:hover,
+.ticket-progress::-webkit-scrollbar-thumb:hover {
 background-color: var(--primary-color-light-2); /* Warna badan scroller saat dihover */
 }
 
@@ -409,10 +448,142 @@ background-color: var(--primary-color-light-2); /* Warna badan scroller saat dih
 }
 td.done-panding{
     text-align: start;
+    font-weight: 600;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+}
+td.done-panding i{
+    margin-right: 5px;
 }
 #done{
     background-color: var(--hijau-color);
 }
+#done .done-panding{
+    color: var(--hijau-dark-color);
+}
 #panding{
+    background-color: var(--merah-color);
+}
+#panding .done-panding{
+    color: var(--merah-dark-color);
+}
+#waiting-progress{
     background-color: var(--kuning-color);
+}
+#waiting-progress .done-panding{
+    color: var(--kuning-dark-color);
+}
+.btn-acc-ticket{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+button{
+    cursor: pointer;
+}
+.ticket-progress{
+    background-color: var(--text-light-color);
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0 2px 4px var(--color-shadow);
+    border-radius: 10px;
+    text-align: center;
+}
+.ticket-progress h2{
+    text-align: start;
+    margin-bottom: 10px;
+}
+.ticket-progress table{
+    width: 100%;
+    border: 1px solid var(--stroke-color);
+    padding: 10px;
+    border-collapse: collapse;
+    font-weight: 600;
+}
+.ticket-progress td{
+    padding: 10px;
+    border-bottom: 1px solid var(--stroke-color);
+    white-space: nowrap;
+}
+.ticket-progress button{
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    font-weight: 400;
+    color: var(--text-light-color);
+    font-size: 13px;
+}
+#finish{
+    background-color: var(--hijau-dark-color);
+}
+#view-ticket{
+    background-color: var(--primary-color);
+}
+#panding-btn{
+    background-color: var(--merah-dark-color);
+}
+.view-popup.active{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+}
+.view-popup .view-popup-content{
+    position: absolute;
+    top: -500px;
+    background-color: var(--text-light-color);
+    transition: var(--tran-05);
+}
+.view-popup.active .view-popup-content{
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    background-color: var(--text-light-color);
+    padding: 20px;
+    transition: var(--tran-05);
+}
+.view-popup-content .info-container{
+    display: flex;
+    justify-content: center;
+}
+.view-popup-content .info{
+    display: flex;
+    flex-direction: column;
+    white-space: wrap;
+    gap: 5px;
+}
+.view-popup-content .value span{
+    text-align: end;
+    background-color: var(--primary-color-light);
+    margin-left: 5px;
+    border-radius: 5px;
+    padding-right: 20px;
+}
+.view-popup-content .desc{
+    margin-top: 10px;
+}
+.view-popup-content .value .desc{
+    text-align: start;
+    background-color: var(--primary-color-light);
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid var(--stroke-color);
+}
+.view-popup.active #close-view-popup{
+    position: relative;
+    top: 100px;
+    left: 50%;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--text-light-color);
+    border-radius: 100px;
+    cursor: pointer;
+    transition: var(--tran-05);
 }

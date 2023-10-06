@@ -62,55 +62,55 @@
                         <td>1</td>
                         <td>Dosen</td>
                         <td>Masalah Jaringan</td>
-                        <td><button>Tangani</button></td>
+                        <td><button>Handle</button></td>
                     </tr>
                     <tr>
                         <td>2</td>
                         <td>Karyawan</td>
                         <td>Masalah Jaringan</td>
-                        <td><button>Tangani</button></td>
+                        <td><button>Handle</button></td>
                     </tr>
                     <tr>
                         <td>3</td>
                         <td>Mahasiswa</td>
                         <td>Masalah Jaringan</td>
-                        <td><button>Tangani</button></td>
+                        <td><button>Handle</button></td>
                     </tr>
                     <tr>
                         <td>4</td>
                         <td>Mahasiswa</td>
                         <td>Masalah Jaringan</td>
-                        <td><button>Tangani</button></td>
+                        <td><button>Handle</button></td>
                     </tr>
                     <tr>
                         <td>4</td>
                         <td>Mahasiswa</td>
                         <td>Masalah Jaringan</td>
-                        <td><button>Tangani</button></td>
+                        <td><button>Handle</button></td>
                     </tr>
                     <tr>
                         <td>4</td>
                         <td>Mahasiswa</td>
                         <td>Masalah Jaringan</td>
-                        <td><button>Tangani</button></td>
+                        <td><button>Handle</button></td>
                     </tr>
                     <tr>
                         <td>4</td>
                         <td>Mahasiswa</td>
                         <td>Masalah Jaringan</td>
-                        <td><button>Tangani</button></td>
+                        <td><button>Handle</button></td>
                     </tr>
                     <tr>
                         <td>4</td>
                         <td>Mahasiswa</td>
                         <td>Masalah Jaringan</td>
-                        <td><button>Tangani</button></td>
+                        <td><button>Handle</button></td>
                     </tr>
                     <tr>
                         <td>4</td>
                         <td>Mahasiswa</td>
                         <td>Masalah Jaringan</td>
-                        <td><button>Tangani</button></td>
+                        <td><button>Handle</button></td>
                     </tr>
                 </tbody>
             </table>
@@ -128,25 +128,74 @@
                         <td>1</td>
                         <td>Dosen</td>
                         <td>Masalah Jaringan</td>
-                        <td class="done-panding"><i class='bx bx-minus'></i>Panding</td>
+                        <td class="done-panding"><i class='bx bx-time-five' ></i>Panding</td>
                     </tr>
                     <tr id="done">
                         <td>2</td>
                         <td>Karyawan</td>
                         <td>Masalah Jaringan</td>
-                        <td class="done-panding"><i class='bx bx-check'></i>Done</td>
+                        <td class="done-panding"><i class='bx bxs-badge-check'></i>Done</td>
                     </tr>
-
-
+                    <tr id="waiting-progress">
+                        <td>2</td>
+                        <td>Karyawan</td>
+                        <td>Masalah Jaringan</td>
+                        <td class="done-panding"><i class='bx bxs-hourglass'></i>Progress</td>
+                    </tr>
                 </tbody>
             </table>
         </div>
         <div class="more">
-            <h3>Today Complete Problem Report</h3>
+            <h3>Today Progress Problem Report</h3>
             <a href="#">See all report</a>
         </div>    
     </div>
 </div>
+
+<div class="ticket-progress">
+    <h2>Ticket Handle it</h2>
+    <table>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Dosen</td>
+                <td>Shaka Aufa</td>
+                <td>Masalah Jaringan</td>
+                <td>A-101</td>
+                <td class="btn-acc-ticket">
+                    <button id="finish">Finish</button>
+                    <button id="view-ticket">View</button>
+                    <button id="panding-btn">Panding</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="view-popup">
+    <div class="view-popup-content">
+        <div class="info-container">
+            <div class="info">
+                <span class="id">ID:</span>
+                <span class="profession">Profession:</span>
+                <span class="name">Name:</span>
+                <span class="problem">Problem:</span>
+                <span class="location">Location:</span>
+                <span class="desc">Desc:</span>
+            </div>
+            <div class="info value">
+                <span class="id">011223-A102-1</span>
+                <span class="profession">Dosen</span>
+                <span class="name">John Dae</span>
+                <span class="problem">Masalah Jaringan</span>
+                <span class="location">A102</span>
+                <span class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem omnis sed possimus minima quas nobis  optio vitae inventore est facere.</span>
+            </div>
+        </div>
+        <span id="close-view-popup">&times;</span>
+    </div>
+</div>
+<!-- ============= end main ============== -->
         </div>
     </div>
 </div>
@@ -154,9 +203,12 @@
 
 <script>
     const hamburger = document.getElementById("hamburger");
+    const view = document.getElementById("view-ticket");
+    const closeBtn = document.getElementById("close-view-popup");
     const sidebar = document.querySelector(".sidebar");
     const hamburgerBtn = document.querySelector(".hamburger");
     const container = document.querySelector(".container");
+    const viewPopup = document.querySelector(".view-popup");
 
     hamburger.addEventListener("click", () => {
         sidebar.classList.toggle("active");
@@ -167,6 +219,17 @@
     hamburger.addEventListener("click", () => {
         container.classList.toggle("active");
     });
+
+    view.addEventListener("click", () => {
+        viewPopup.classList.add("active");
+    });
+
+    closeBtn.addEventListener("click",() =>{
+        viewPopup.classList.remove("active");
+    });
+
+
+
 </script>
 
 </body>
