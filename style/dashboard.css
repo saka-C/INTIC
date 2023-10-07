@@ -536,8 +536,8 @@ button{
     position: absolute;
     top: -500px;
     background-color: var(--text-light-color);
-    transition: var(--tran-05);
 }
+
 .view-popup.active .view-popup-content{
     width: 100%;
     position: absolute;
@@ -586,4 +586,34 @@ button{
     border-radius: 100px;
     cursor: pointer;
     transition: var(--tran-05);
+}
+
+/* ========== inventory CSS =========== */
+
+.add-data{
+    width: 500px;
+    display: flex;
+    white-space: nowrap;
+    overflow-x: scroll;
+    border: 1px solid #ccc; 
+    cursor: grab;
+    gap: 20px;
+}
+.card-add-data{
+    border: 2px solid var(--primary-color);
+    padding: 5px;
+    width: 100%;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.card-add-data:active {
+    cursor: grabbing; /* Ubah cursor ke "grabbing" saat elemen ditekan */
+}
+.card-add-data a{
+    color: var(--text-color);
+    font-weight: 700;
+    text-decoration: none;
+    background-color: red;
+    padding: 5px 20px;
 }

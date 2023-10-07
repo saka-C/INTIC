@@ -17,10 +17,10 @@
         <img src="asset/logo-ui.png" alt="">
     </div>
     <nav>
-        <a href="admin-page.html"><i class='bx bxs-tachometer'></i><span>Dashboard</span></a>
-        <a href="list-learn.html"><i class='bx bxs-folder-plus'></i><span>Add Data</span></a>
-        <a href="community.html"><i class='bx bxs-user-pin' ></i><span>Data User</span></a>
-        <a href="project-properties.html"><i class='bx bxs-data' ></i><span>Store Data</span></a>
+        <a href="#"><i class='bx bxs-tachometer'></i><span>Dashboard</span></a>
+        <a href="inventory.html"><i class='bx bxs-folder-plus'></i><span>Add Inventory</span></a>
+        <a href="ticketing.html"><i class='bx bxs-notification'></i><span>Notification</span></a>
+        <a href="history.html"><i class='bx bx-history'></i><span>History</span></a>
     </nav>
     <div class="bottom-nav">
         <a href="#" ><i class='bx bx-log-out icon' ></i><span>Logout</span></a>
@@ -83,31 +83,31 @@
                         <td><button>Handle</button></td>
                     </tr>
                     <tr>
-                        <td>4</td>
+                        <td>5</td>
                         <td>Mahasiswa</td>
                         <td>Masalah Jaringan</td>
                         <td><button>Handle</button></td>
                     </tr>
                     <tr>
-                        <td>4</td>
+                        <td>6</td>
                         <td>Mahasiswa</td>
                         <td>Masalah Jaringan</td>
                         <td><button>Handle</button></td>
                     </tr>
                     <tr>
-                        <td>4</td>
+                        <td>7</td>
                         <td>Mahasiswa</td>
                         <td>Masalah Jaringan</td>
                         <td><button>Handle</button></td>
                     </tr>
                     <tr>
-                        <td>4</td>
+                        <td>8</td>
                         <td>Mahasiswa</td>
                         <td>Masalah Jaringan</td>
                         <td><button>Handle</button></td>
                     </tr>
                     <tr>
-                        <td>4</td>
+                        <td>9</td>
                         <td>Mahasiswa</td>
                         <td>Masalah Jaringan</td>
                         <td><button>Handle</button></td>
@@ -137,7 +137,25 @@
                         <td class="done-panding"><i class='bx bxs-badge-check'></i>Done</td>
                     </tr>
                     <tr id="waiting-progress">
-                        <td>2</td>
+                        <td>3</td>
+                        <td>Karyawan</td>
+                        <td>Masalah Jaringan</td>
+                        <td class="done-panding"><i class='bx bxs-hourglass'></i>Progress</td>
+                    </tr>
+                    <tr id="done">
+                        <td>4</td>
+                        <td>Karyawan</td>
+                        <td>Masalah Jaringan</td>
+                        <td class="done-panding"><i class='bx bxs-badge-check'></i>Done</td>
+                    </tr>
+                    <tr id="done">
+                        <td>5</td>
+                        <td>Karyawan</td>
+                        <td>Masalah Jaringan</td>
+                        <td class="done-panding"><i class='bx bxs-badge-check'></i>Done</td>
+                    </tr>
+                    <tr id="waiting-progress">
+                        <td>6</td>
                         <td>Karyawan</td>
                         <td>Masalah Jaringan</td>
                         <td class="done-panding"><i class='bx bxs-hourglass'></i>Progress</td>
@@ -147,7 +165,7 @@
         </div>
         <div class="more">
             <h3>Today Progress Problem Report</h3>
-            <a href="#">See all report</a>
+            <a href="#">See all progress</a>
         </div>    
     </div>
 </div>
@@ -201,36 +219,7 @@
 </div>
 
 
-<script>
-    const hamburger = document.getElementById("hamburger");
-    const view = document.getElementById("view-ticket");
-    const closeBtn = document.getElementById("close-view-popup");
-    const sidebar = document.querySelector(".sidebar");
-    const hamburgerBtn = document.querySelector(".hamburger");
-    const container = document.querySelector(".container");
-    const viewPopup = document.querySelector(".view-popup");
-
-    hamburger.addEventListener("click", () => {
-        sidebar.classList.toggle("active");
-    });
-    hamburger.addEventListener("click", () => {
-        hamburgerBtn.classList.toggle("active");
-    });
-    hamburger.addEventListener("click", () => {
-        container.classList.toggle("active");
-    });
-
-    view.addEventListener("click", () => {
-        viewPopup.classList.add("active");
-    });
-
-    closeBtn.addEventListener("click",() =>{
-        viewPopup.classList.remove("active");
-    });
-
-
-
-</script>
+<script src="style/script.js"></script>
 
 </body>
 </html>
