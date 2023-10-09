@@ -1,6 +1,5 @@
 const hamburger = document.getElementById("hamburger");
 const view = document.getElementById("view-ticket");
-const report = document.getElementById("report-popup");
 
 const closeBtn = document.getElementById("close-view-popup");
 
@@ -24,9 +23,6 @@ hamburger.addEventListener("click", () => {
 
 view.addEventListener("click", () => {
     viewPopup.classList.add("active");
-});
-Report.addEventListener("click", () => {
-    reportPopup.classList.toggle("active");
 });
 
 
