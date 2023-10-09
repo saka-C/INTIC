@@ -30,7 +30,7 @@
                 <i class='bx bxs-message-detail'></i>
                 <p>Lapor Kendala</p>
             </button>
-            <button>
+            <button id="device-popup">
                 <i class="ph-fill ph-desktop-tower"></i>
                 <p>Inventory Fakultas</p>
             </button>
@@ -146,9 +146,38 @@
     </div>
 </div>
 
-<div class="device-card">
-    
+
+<div class="device-card-popup">
+    <div class="device-card">
+        <div class="top-popup">
+            <button class="btn-close" id="close-device-popup">&times;</button>
+        </div>
+        <div class="device-grid">
+            <button type="submit">
+                <img src="asset/desktop.png" alt="">
+                <span class="text-device">PC</span>
+            </button>
+            <button type="submit">
+                <img src="asset/laptop.png" alt="">
+                <span class="text-device">laptop</span>
+            </button>
+            <button type="submit">
+                <img src="asset/printer.png" alt="">
+                <span class="text-device">printer</span>
+            </button>
+            <button type="submit">
+                <img src="asset/cctv.png" alt="">
+                <span class="text-device">cctv</span>
+            </button>
+            <button type="submit">
+                <img src="asset/projector.png" alt="">
+                <span class="text-device">projector</span>
+            </button>
+                
+        </div>
+    </div>
 </div>
+
 <div class="ticket-card-popup">
     <div class="ticket-card">
         <div class="top-popup">
@@ -181,10 +210,13 @@
 <script>
     const Report = document.getElementById("report-popup");
     const Ticket = document.getElementById("ticket-popup");
+    const Device = document.getElementById("device-popup");
     const reportPopup = document.querySelector(".report-card-popup");
     const ticketPopup = document.querySelector(".ticket-card-popup");
+    const devicePopup = document.querySelector(".device-card-popup");
     const closeBtn1 = document.getElementById("close-report-popup");
-    const closeBtn2 = document.getElementById("close-ticket-popup");
+    const closeBtn2 = document.getElementById("close-device-popup");
+    const closeBtn3 = document.getElementById("close-ticket-popup");
 
     Report.addEventListener("click", () => {
     reportPopup.classList.add("active");
@@ -193,12 +225,18 @@
     Ticket.addEventListener("click", () => {
     ticketPopup.classList.add("active");
     });
+    Device.addEventListener("click", () => {
+    devicePopup.classList.add("active");
+    });
 
 
     closeBtn1.addEventListener("click",() =>{
     reportPopup.classList.remove("active");
     });
     closeBtn2.addEventListener("click",() =>{
+    devicePopup.classList.remove("active");
+    });
+    closeBtn3.addEventListener("click",() =>{
     ticketPopup.classList.remove("active");
     });
 </script>
