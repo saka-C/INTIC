@@ -131,6 +131,7 @@ body{
     text-decoration: none;
     font-weight: 700;
     font-size: 15px;
+    border: none;
     box-shadow: 0px 4px 4px 0px var(--color-shadow);
 }
 .garis button i{
@@ -461,4 +462,47 @@ background-color: var(--primary-color-light-2); /* Warna badan scroller saat dih
     padding: 10px;
     border-radius: 10px;
     border: 1px solid var(--text-color);
+}
+@media (max-width:950px){
+    .ticket-card{
+        width: 90%;
+    }
+}
+@media (max-width:550px){
+    .ticket-card{
+        width: 100%;
+    }
+    .left-ticket{
+        display: flex;
+        justify-content: space-around;
+    }
+    .left-ticket span{
+        font-size: 13px;
+    }
+    .left-ticket p{
+        font-size: 14px;
+        font-weight: 600;
+    }
+    .desc-problem{
+        font-size: 12px;
+    }
+    .problem-ticket{
+        font-size: 23px;
+    }
+    .mid-ticket{
+        flex-direction: column;
+        align-items: center;
+    }
+    .right-ticket{
+        flex-direction: column;
+        align-items: center;
+    }
+    .line-cut{
+        position: static;
+        width: 100%;
+        right: 0px;
+        height: 1px;
+        margin-bottom: 20px;
+        border: 1px dashed var(--stroke-color);
+    }
 }

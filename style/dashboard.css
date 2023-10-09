@@ -651,6 +651,7 @@ a{
     font-size: 13px;
     display: flex;
     align-items: center;
+    border: none;
 }
 .row-data{
     font-size: 30px;
@@ -658,8 +659,9 @@ a{
     margin-top: 10px;
 }
 .data-text #view-data-invent{
-    background-color: none;
+    background: none;
     font-size: 25px;
+    border: none;
     display: flex;
     text-decoration: none;
     align-items: center;
@@ -830,7 +832,7 @@ a{
     margin-top: 7px;
     font-size: 20px;
 }
-.add-data-self .showing-page a{
+.add-data-self .showing-page button{
     color: var(--primary-color);
     text-decoration: none;
     font-weight: 600;
