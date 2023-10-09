@@ -17,10 +17,10 @@
         <img src="asset/logo-ui.png" alt="">
     </div>
     <nav>
-        <a href="admin-page.html"><i class='bx bxs-tachometer'></i><span>Dashboard</span></a>
-        <a href="list-learn.html"><i class='bx bxs-folder-plus'></i><span>Add Inventory</span></a>
+        <a href="dashboard.html"><i class='bx bxs-tachometer'></i><span>Dashboard</span></a>
+        <a href=""><i class='bx bxs-folder-plus'></i><span>Add Inventory</span></a>
         <a href="community.html"><i class='bx bxs-notification'></i><span>Notification</span></a>
-        <a href="project-properties.html"><i class='bx bx-history'></i><span>History</span></a>
+        <a href="index.html"><i class='bx bxs-home'></i><span>Home</span></a>
     </nav>
     <div class="bottom-nav">
         <a href="#" ><i class='bx bx-log-out icon' ></i><span>Logout</span></a>
@@ -30,23 +30,188 @@
 <div class="switch-mobile ">
     <div class="main-content">
         <h1>Inventory</h1>
-<div class="add-data">
-    <div class="card-add-data">
-        <a href="#">PC</a>
+<form action="">
+    <div class="add-data">
+        <div class="card-data">
+            <div class="data-text">
+                <p>PC</p>
+                <span class="showing-page">
+                    <a href="#" id="view-data-invent"><i class='bx bx-show'></i></a>
+                    <a href="add-data-page.html" id="add-data"><i class='bx bx-plus'></i>Add data</a>
+                </span>
+            </div>
+            <span class="row-data">200</span>
+            <p>Row data</p>
+        </div>
+        <div class="card-data">
+            <div class="data-text">
+                <p>Laptop</p>
+                <span class="showing-page">
+                    <a href="#" id="view-data-invent"><i class='bx bx-show'></i></a>
+                    <a href="add-data-page.html" id="add-data"><i class='bx bx-plus'></i>Add data</a>
+                </span>
+            </div>
+            <span class="row-data">45</span>
+            <p>Row data</p>
+        </div>
+        <div class="card-data">
+            <div class="data-text">
+                <p>CCTV</p>
+                <span class="showing-page">
+                    <a href="#" id="view-data-invent"><i class='bx bx-show'></i></a>
+                    <a href="add-data-page.html" id="add-data"><i class='bx bx-plus'></i>Add data</a>
+                </span>
+            </div>
+            <span class="row-data">60</span>
+            <p>Row data</p>
+        </div>
+        <div class="card-data">
+            <div class="data-text">
+                <p>Printer</p>
+                <span class="showing-page">
+                    <a href="#" id="view-data-invent"><i class='bx bx-show'></i></a>
+                    <a href="add-data-page.html" id="add-data"><i class='bx bx-plus'></i>Add data</a>
+                </span>
+            </div>
+            <span class="row-data">52</span>
+            <p>Row data</p>
+        </div>
     </div>
-    <div class="card-add-data">
-        <a href="#">Laptop</a>
+
+    <div class="table-inventory">
+        <div class="table-self-category">
+            <div class="cateogry">
+                <div class="btn-category">
+                    <button>All</button>
+                </div>
+                <div class="search-invent">
+                    <span class="icon-src"><i class='bx bx-search'></i></span>
+                    <input type="text" name="" id="">
+                </div>
+            </div>
+            <div class="table-self first">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>No.</th>
+                            <th>Device</th>
+                            <th>Ruangan</th>
+                            <th>Pemilik</th>
+                            <th>Tanggal input</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Laptop</td>
+                            <td>A-109</td>
+                            <td>Pak Shaka</td>
+                            <td>12/07/2023</td>
+                            <td class="btn-acc-tbl">
+                                <a href="edit-data.html" id="view-data-invent"><i class='bx bx-show' ></i></a>
+                                <button id="delete"><i class='bx bxs-trash'></i></button>
+                                <button id="edit"><i class='bx bxs-edit-alt'></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Laptop</td>
+                            <td>A-109</td>
+                            <td>Pak Shaka</td>
+                            <td>12/07/2023</td>
+                            <td class="btn-acc-tbl">
+                                <a href="edit-data.html" id="view-data-invent"><i class='bx bx-show' ></i></a>
+                                <button id="delete"><i class='bx bxs-trash'></i></button>
+                                <button id="edit"><i class='bx bxs-edit-alt'></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Laptop</td>
+                            <td>A-109</td>
+                            <td>Pak Shaka</td>
+                            <td>12/07/2023</td>
+                            <td class="btn-acc-tbl">
+                                <a href="edit-data.html" id="view-data-invent"><i class='bx bx-show' ></i></a>
+                                <button id="delete"><i class='bx bxs-trash'></i></button>
+                                <button id="edit"><i class='bx bxs-edit-alt'></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Laptop</td>
+                            <td>A-109</td>
+                            <td>Pak Shaka</td>
+                            <td>12/07/2023</td>
+                            <td class="btn-acc-tbl">
+                                <a href="edit-data.html" id="view-data-invent"><i class='bx bx-show' ></i></a>
+                                <button id="delete"><i class='bx bxs-trash'></i></button>
+                                <button id="edit"><i class='bx bxs-edit-alt'></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Laptop</td>
+                            <td>A-109</td>
+                            <td>Pak Shaka</td>
+                            <td>12/07/2023</td>
+                            <td class="btn-acc-tbl">
+                                <a href="edit-data.html" id="view-data-invent"><i class='bx bx-show' ></i></a>
+                                <button id="delete"><i class='bx bxs-trash'></i></button>
+                                <button id="edit"><i class='bx bxs-edit-alt'></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Laptop</td>
+                            <td>A-109</td>
+                            <td>Pak Shaka</td>
+                            <td>12/07/2023</td>
+                            <td class="btn-acc-tbl">
+                                <a href="edit-data.html" id="view-data-invent"><i class='bx bx-show' ></i></a>
+                                <button id="delete"><i class='bx bxs-trash'></i></button>
+                                <button id="edit"><i class='bx bxs-edit-alt'></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Laptop</td>
+                            <td>A-109</td>
+                            <td>Pak Shaka</td>
+                            <td>12/07/2023</td>
+                            <td class="btn-acc-tbl">
+                                <a href="edit-data.html" id="view-data-invent"><i class='bx bx-show' ></i></a>
+                                <button id="delete"><i class='bx bxs-trash'></i></button>
+                                <button id="edit"><i class='bx bxs-edit-alt'></i></button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div> 
+        </div>
+        <div class="table-self second">
+            <div class="add-data-self">
+                <p>Add Data</p>
+                <span class="title-card">Room</span>
+                <span class="showing-page">
+                    <a href="#" id="view-data-invent"><i class='bx bx-show'></i></a>
+                    <a href="#" id="add-data"><i class='bx bx-plus'></i></a>
+                </span>
+            </div>
+            <div class="add-data-self">
+                <p>Add Data</p>
+                <span class="title-card">Unit</span>
+                <span class="showing-page">
+                    <a href="#" id="view-data-invent"><i class='bx bx-show'></i></a>
+                    <a href="#" id="add-data"><i class='bx bx-plus'></i></a>
+                </span>
+            </div>
+        </div>
+
     </div>
-    <div class="card-add-data">
-        <a href="#">Printer</a>
-    </div>
-    <div class="card-add-data">
-        <a href="#">PC</a>
-    </div>
-    <div class="card-add-data">
-        <a href="#">CCTV</a>
-    </div>
-</div>
+</form>
+
 <!-- ============= end main ============== -->
         </div>
     </div>

@@ -3,13 +3,24 @@
 
 :root{
     /* Color */
-    --body-color: #F0F0F0;
+    --body-color: #fafdff;
     --text-light-color: #ffff;
-    --primary-color: #3085C3;
+    --primary-color: #4285F4;
+    --th-color: #c5dafc;
+    --hijau-color: #92fca4;
+    --hijau-dark-color: #40d15b;
+    --merah-color: #FCAEAE;
+    --merah-dark-color: #f84747;
+    --kuning-color: #ffdf81;
+    --kuning-dark-color: #ffc002;
+    --biru-color: #A6F6FF;
+    --biru-dark-color: #1ed5e9;
     --primary-color-light: #FAFAFA;
     --primary-color-light-2: #E0E0E0;
     --color-shadow: rgba(0, 0, 0, 0.25);
     --text-color: #292A2A;
+    --stroke-color: #ddd;
+    --stroke-color-draken:#898989;
 
     /* transition */
     --tran-01: all 0.1s ease;
@@ -106,7 +117,7 @@ body{
     display: flex;
     gap: 71px;
 }
-.garis a{
+.garis button{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -122,7 +133,7 @@ body{
     font-size: 15px;
     box-shadow: 0px 4px 4px 0px var(--color-shadow);
 }
-.garis a i{
+.garis button i{
     font-size: 50px;
 }
 @media screen and (max-width: 760px){
@@ -137,7 +148,7 @@ body{
         top: 30%;
         gap: 40px;
     }
-    .garis a{
+    .garis button{
         width: 142px;
         height: 142px;
     }
@@ -149,7 +160,7 @@ body{
     .garis .card{
         gap: 20px;
     }
-    .garis a{
+    .garis button{
         border-radius: 15px;
         width: 90px;
         height: 90px;
@@ -281,4 +292,173 @@ background-color: var(--primary-color-light-2); /* Warna badan scroller saat dih
     .antrian-image{
         display: none;
     }
+}
+.top-popup{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.btn-card-popup{
+    display: flex;
+    justify-content: end;
+}
+.btn-card-popup button{
+    padding: 5px 20px;
+    font-size: 13px;
+    background-color: var(--body-color);
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px var(--color-shadow);
+    font-weight: 600;
+}
+.btn-close{
+    background-color: var(--stroke-color);
+    cursor: pointer;
+    padding: 3px 8px;
+    border-radius: 100px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.report-card-popup{
+    display: none;
+}
+.report-card-popup.active{
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+}
+.report-card{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 80%; /* Lebar maksimum popup */
+    max-height: 80%; /* Tinggi maksimum popup */
+    overflow: auto; /* Tampilkan scrollbar jika kontennya terlalu besar */
+    width: 50%;
+    background-color: var(--text-light-color);
+    border-radius: 10px;
+    box-shadow: 0 2px 4px var(--color-shadow);
+    padding: 20px;
+}
+@media (max-width:600px){
+    .report-card{
+        width: 100%;
+    }
+}
+.report-card form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.report-card select{
+    border: 2px solid var(--primary-color);
+    padding: 8px 20px;
+    border-radius: 10px;
+}
+.report-card textarea {
+    resize: vertical;
+    border: 2px solid var(--primary-color);
+    padding: 10px;
+    height: 50px;
+    border-radius: 10px;
+    transition: var(--tran-03);
+}
+.report-card textarea:focus {
+    outline: none;
+    height: 90px;
+}
+
+.ticket-card-popup{
+    display: none;
+}
+.ticket-card-popup.active{
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+}
+.ticket-card .top-popup{
+    display: flex;
+    justify-content: end;
+}
+.ticket-card{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 80%; /* Lebar maksimum popup */
+    max-height: 80%; /* Tinggi maksimum popup */
+    overflow: auto; /* Tampilkan scrollbar jika kontennya terlalu besar */
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--text-light-color);
+    box-shadow: 0 2px 4px var(--color-shadow);
+    padding: 10px;
+    border-radius: 10px;
+    width: 60%;
+}
+.top-ticket{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.top-ticket .id-ticket{
+    background-color: var(--primary-color);
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-weight: 600;
+    color: var(--text-light-color);
+}
+.mid-ticket{
+    display: flex;
+    justify-content: space-between;
+}
+.left-ticket{
+    padding: 10px;
+    width: 100%;
+}
+.right-ticket{
+    display: flex;
+    padding: 10px;
+}
+.left-ticket span{
+    font-size: 13px;
+}
+.left-ticket p{
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.line-cut{
+    position: relative;
+    width: 1%;
+    right: 17px;
+    height: 210px;
+    border-left: 2px dashed var(--stroke-color);
+}
+.problem-ticket{
+    font-size: 30px;
+    font-weight: 700;
+}
+.desc-problem{
+    font-size: 14px;
+    background-color: var(--stroke-color);
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid var(--text-color);
 }

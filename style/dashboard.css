@@ -36,6 +36,7 @@ background-color: var(--primary-color-light-2); /* Warna badan scroller saat dih
     --body-color: #fafdff;
     --text-light-color: #ffff;
     --primary-color: #4285F4;
+    --th-color: #c5dafc;
     --hijau-color: #92fca4;
     --hijau-dark-color: #40d15b;
     --merah-color: #FCAEAE;
@@ -362,13 +363,15 @@ nav{
 }
 .table-received tbody tr:nth-child(odd),
 .table-complete tbody tr:nth-child(odd),
-.ticket-progress tbody tr:nth-child(odd){
+.ticket-progress tbody tr:nth-child(odd),
+.table-self tbody tr:nth-child(odd){
     background-color: var(--body-color); 
 }
 
 .table-received tbody tr:nth-child(even),
 .table-complete tbody tr:nth-child(even),
-.ticket-progress tbody tr:nth-child(even) {
+.ticket-progress tbody tr:nth-child(even),
+.table-self tbody tr:nth-child(even) {
     background-color: var(--primary-color-light-2); 
 }
 
@@ -396,7 +399,8 @@ nav{
 /* Style untuk scroller horizontal */
 .table-received::-webkit-scrollbar,
 .table-complete::-webkit-scrollbar,
-.ticket-progress::-webkit-scrollbar {
+.ticket-progress::-webkit-scrollbar,
+.table-self::-webkit-scrollbar {
 width: 12px; /* Lebar scroller */
 height: 12px; /* Tinggi scroller */
 }
@@ -404,7 +408,8 @@ height: 12px; /* Tinggi scroller */
 /* Style untuk badan scroller horizontal */
 .table-received::-webkit-scrollbar-thumb,
 .table-complete::-webkit-scrollbar-thumb,
-.ticket-progress::-webkit-scrollbar-thumb {
+.ticket-progress::-webkit-scrollbar-thumb,
+.table-self::-webkit-scrollbar-thumb {
 background-color: var(--primary-color-light-2); /* Warna badan scroller */
 border-radius: 6px; /* Bentuk badan scroller */
 }
@@ -412,7 +417,8 @@ border-radius: 6px; /* Bentuk badan scroller */
 /* Style untuk scroller vertikal */
 .table-received::-webkit-scrollbar-vertical,
 .table-complete::-webkit-scrollbar-vertical,
-.ticket-progress::-webkit-scrollbar-vertical {
+.ticket-progress::-webkit-scrollbar-vertical,
+.table-self::-webkit-scrollbar-vertical {
 width: 12px; /* Lebar scroller */
 height: 12px; /* Tinggi scroller */
 }
@@ -420,7 +426,8 @@ height: 12px; /* Tinggi scroller */
 /* Style untuk badan scroller vertikal */
 .table-received::-webkit-scrollbar-thumb:vertical ,
 .table-complete::-webkit-scrollbar-thumb:vertical,
-.ticket-progress::-webkit-scrollbar-thumb:vertical{
+.ticket-progress::-webkit-scrollbar-thumb:vertical,
+.table-self::-webkit-scrollbar-thumb:vertical{
 background-color: var(--primary-color-light-2); /* Warna badan scroller */
 border-radius: 6px; /* Bentuk badan scroller */
 }
@@ -428,7 +435,8 @@ border-radius: 6px; /* Bentuk badan scroller */
 /* Style untuk scroller saat dihover */
 .table-received::-webkit-scrollbar-thumb:hover, 
 .table-complete::-webkit-scrollbar-thumb:hover,
-.ticket-progress::-webkit-scrollbar-thumb:hover {
+.ticket-progress::-webkit-scrollbar-thumb:hover,
+.table-self::-webkit-scrollbar-thumb:hover {
 background-color: var(--primary-color-light-2); /* Warna badan scroller saat dihover */
 }
 
@@ -481,6 +489,9 @@ td.done-panding i{
 }
 button{
     cursor: pointer;
+}
+a{
+    text-decoration: none;
 }
 .ticket-progress{
     background-color: var(--text-light-color);
@@ -591,29 +602,319 @@ button{
 /* ========== inventory CSS =========== */
 
 .add-data{
-    width: 500px;
-    display: flex;
-    white-space: nowrap;
-    overflow-x: scroll;
-    border: 1px solid #ccc; 
-    cursor: grab;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
     gap: 20px;
 }
-.card-add-data{
-    border: 2px solid var(--primary-color);
-    padding: 5px;
+@media (max-width: 1115px){
+    .add-data{
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 20px;
+    }
+}
+@media (max-width: 600px){
+    .add-data{
+        display: grid;
+        grid-template-columns: auto;
+        gap: 20px;
+    }
+}
+.card-data{
+    background-color: var(--text-light-color);
+    box-shadow: 0 2px 4px var(--color-shadow);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 20px;
+    border-radius: 10px;
+}
+.data-text{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.data-text p{
+    font-weight: 600;
+    font-size: 20px;
+}
+.showing-page{
+    display: flex;
+    align-items: center;
+}
+.data-text #add-data{
+    background-color: var(--primary-color);
+    color: var(--text-light-color);
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+}
+.row-data{
+    font-size: 30px;
+    font-weight: 700;
+    margin-top: 10px;
+}
+.data-text #view-data-invent{
+    background-color: none;
+    font-size: 25px;
+    display: flex;
+    text-decoration: none;
+    align-items: center;
+    color: var(--primary-color);
+    margin-right: 10px;
+}
+.table-inventory {
+    background-color: var(--text-light-color);
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    box-shadow: 0 2px 4px var(--color-shadow);
+    margin-top: 30px;
+}
+@media (max-width: 1115px){
+    .table-inventory {
+        flex-direction: column;
+    }
+}
+@media (max-width: 500px){
+    .table-inventory {
+        padding: 5px;
+    }
+}
+.table-inventory table{
+    background-color: var(--body-color);
     width: 100%;
     text-align: center;
-    border-radius: 5px;
-    cursor: pointer;
+    border-collapse: collapse;
 }
-.card-add-data:active {
-    cursor: grabbing; /* Ubah cursor ke "grabbing" saat elemen ditekan */
+.table-self-category{
+    width: 100%;
 }
-.card-add-data a{
-    color: var(--text-color);
+.cateogry{
+    background-color: var(--text-light-color);
+    padding: 5px;
+    border: 1px  solid var(--stroke-color);
+    border-bottom: none;
+    border-radius: 10px 10px 0px 0px;
+    box-shadow: 0px 2px 5px var(--th-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.table-self-category .cateogry button{
+    border-bottom: 1px solid var(--stroke-color);
+    font-size: 15px;
+    font-weight: 600;
+    background-color: var(--body-color);
+    padding: 10px 20px;
+    border-radius: 10px 10px 0px 0px;
+}
+.search-invent{
+    padding: 10px 20px;
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+.search-invent .icon-src {
+    font-size: 15px;
+    position: relative;
+    left: 30px;
+    top: 1px;
+}
+.search-invent input[type=text] {
+    width: 30%;
+    padding: 5px 10px ;
+    border-radius: 10px;
+    border: 2px solid var(--stroke-color-draken);
+    transition: var(--tran-03);
+    padding-left: 35px;
+  }
+.search-invent input[type=text]:focus {
+    border: 2px solid var(--primary-color);
+    outline: none;
+    border-radius: 10px;
+    width: 40%;
+  }
+@media (max-width: 500px){
+    .search-invent input[type=text] {
+        width: 70%;
+        padding: 5px 10px ;
+        border-radius: 10px;
+        border: 2px solid var(--stroke-color-draken);
+        transition: var(--tran-03);
+        padding-left: 35px;
+      }
+    .search-invent input[type=text]:focus {
+        border: 2px solid var(--primary-color);
+        outline: none;
+        border-radius: 10px;
+        width: 80%;
+      }
+}
+.table-self{
+    width: 100%;
+    padding: 10px;
+    border-top: none;
+    border: 1px solid var(--stroke-color);
+    max-height: 400px;
+    overflow-y: auto;
+    overflow-x: auto;
+    border-radius: 0px 0px 10px 10px;
+}
+.table-inventory .second{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 10px;
+}
+@media (max-width: 1115px){
+    .table-inventory .second{
+        width: 100%;
+    }
+}
+.table-inventory th,
+.table-inventory td{
+    padding: 10px;
+}
+.table-inventory th{
+    border: 1px solid var(--stroke-color);
+    background-color: var(--th-color);
+}
+.table-inventory td{
+    border-bottom: 1px solid var(--stroke-color);
+    font-size: 14px;
+    font-weight: 500;
+}
+.btn-acc-tbl{
+    display: flex;
+    justify-content: space-evenly;
+}
+.table-inventory button{
+    background: none;
+    border: none;
+    font-size: 20px;
+}
+.table-inventory #view-data-invent{
+    color: var(--primary-color);
+}
+.table-inventory #delete{
+    color: var(--merah-dark-color);
+}
+.table-inventory #edit{
+    color: var(--kuning-dark-color);
+}
+.add-data-self{
+    background-color: var(--text-light-color);
+    box-shadow: 0 2px 3px var(--color-shadow);
+    padding: 10px;
+    border: 1px solid var(--stroke-color);
+    border-radius: 10px;
+}
+.add-data-self .title-card{
+    font-size: 30px;
     font-weight: 700;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+.add-data-self .showing-page{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 7px;
+    font-size: 20px;
+}
+.add-data-self .showing-page a{
+    color: var(--primary-color);
     text-decoration: none;
-    background-color: red;
+    font-weight: 600;
+}
+
+/* ========= Add Data CSS ============= */
+.form-grid{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+.card-form{
+    background-color: var(--text-light-color);
+    border: 1px solid var(--stroke-color);
+    width: 100%;
+    border-radius: 20px;
+    padding-bottom: 20px;
+}
+.card-form-header{
+    background-color: var(--primary-color);
+    width: 100%;
+    padding: 20px;
+    font-size: 20px;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    color: var(--text-light-color);
+    border-radius: 20px 20px 0px 0px;
+    margin-bottom: 20px;
+}
+.form-group{
+    display: flex;
+    flex-direction: column;
+    padding: 10px 30px;
+}
+.card-form label{
+    color: var(--text-color);
+    font-weight: 600;
+}
+.card-form input{
+    border: none;
+    border-bottom: 2px solid var(--primary-color);
+    height: 30px;
+    padding: 10px;
+    transition: var(--tran-03);
+}
+.card-form input:focus{
+    outline: none;
+    height: 40px;
+}
+.card-form select{
+    border: none;
+    border-bottom: 2px solid var(--primary-color);
+    padding: 8px;
+}
+.card-form  select::-ms-expand {
+    display: none;
+}
+.card-form textarea {
+    resize: vertical;
+    border: none;
+    border-bottom: 2px solid var(--primary-color);
+    padding: 10px;
+    height: 50px;
+    transition: var(--tran-03);
+}
+.card-form textarea:focus {
+    outline: none;
+    height: 90px;
+}
+.btn-change{
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: end;
+}
+.btn-change button{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 5px;
     padding: 5px 20px;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text-light-color);
 }

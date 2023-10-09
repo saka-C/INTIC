@@ -26,18 +26,18 @@
     <div class="garis">
         <p class="opacity">.</p>
         <div class="card">
-            <a href="erorpage.html">
+            <button id="report-popup">
                 <i class='bx bxs-message-detail'></i>
                 <p>Lapor Kendala</p>
-            </a>
-            <a href="erorpage.html">
+            </button>
+            <button>
                 <i class="ph-fill ph-desktop-tower"></i>
                 <p>Inventory Fakultas</p>
-            </a>
-            <a href="erorpage.html">
+            </button>
+            <button id="ticket-popup">
                 <i class="ph-fill ph-ticket"></i>
                 <p>Tiket Laporan Anda</p>
-            </a>
+            </button>
         </div>      
     </div>
     <div class="container-content">
@@ -118,6 +118,89 @@
                 <img src="asset/thumbnail2.png" alt="">
             </div>
         </div>
+
+
+<div class="report-card-popup">
+    <div class="report-card">
+        <form action="">
+            <div class="top-popup">
+                <span>Lengkapi form masalah!</span>
+                <button class="btn-close" id="close-report-popup">&times;</button>
+            </div>
+            <select>
+                <option value="#">A-107</option>
+                <option value="#">A-108</option>
+                <option value="#">A-109</option>
+            </select>
+            <select>
+                <option value="#">Masalah Jaringan</option>
+                <option value="#">Device Mati</option>
+                <option value="#">Rusak</option>
+            </select>
+            <textarea name="" id="" cols="30" rows="10"></textarea>
+            <div class="btn-card-popup">
+                <button>Laporkan❗</button>
+            </div>
+
+        </form>
     </div>
+</div>
+
+<div class="device-card">
+    
+</div>
+<div class="ticket-card-popup">
+    <div class="ticket-card">
+        <div class="top-popup">
+            <button class="btn-close" id="close-ticket-popup">&times;</button>
+        </div>
+        <div class="top-ticket">
+            <span class="id-ticket">9803179</span>
+            <span class="date-ticket">23/08/2012</span>
+        </div>
+        <div class="mid-ticket">
+            <div class="left-ticket">
+                <span>Nama: <p>Shaka Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis.</p></span>
+                <span>Role: <p>Dosen</p></span>
+                <span>Ruangan: <p>A103</p></span>
+            </div>
+            <div class="right-ticket">
+                <div class="line-cut"></div>
+                <div>
+                    <span class="problem-ticket">Masalah Jaringan</span>
+                    <div class="desc-problem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, quo ad repellendus eos a perspiciatis, iusto mollitia, culpa harum dolor provident neque voluptates accusantium itaque earum eligendi repellat velit? Possimus, corrupti maxime aspernatur quaerat qui ab fugit officiis iusto dolorem id earum repellat, modi voluptatem tenetur officia iure rem eum!</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    </div>
+
+<!-- <script src="style/script.js"></script> -->
+<script>
+    const Report = document.getElementById("report-popup");
+    const Ticket = document.getElementById("ticket-popup");
+    const reportPopup = document.querySelector(".report-card-popup");
+    const ticketPopup = document.querySelector(".ticket-card-popup");
+    const closeBtn1 = document.getElementById("close-report-popup");
+    const closeBtn2 = document.getElementById("close-ticket-popup");
+
+    Report.addEventListener("click", () => {
+    reportPopup.classList.add("active");
+    });
+
+    Ticket.addEventListener("click", () => {
+    ticketPopup.classList.add("active");
+    });
+
+
+    closeBtn1.addEventListener("click",() =>{
+    reportPopup.classList.remove("active");
+    });
+    closeBtn2.addEventListener("click",() =>{
+    ticketPopup.classList.remove("active");
+    });
+</script>
 </body>
 </html>
