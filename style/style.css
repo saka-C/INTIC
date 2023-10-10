@@ -273,7 +273,6 @@ body{
     }
     .thumbnail-text{
         width: 100%;
-        padding: 10px;
     }
 }
 .antrian{
@@ -492,7 +491,6 @@ background-color: var(--primary-color-light-2); /* Warna badan scroller saat dih
     border-radius: 10px;
     box-shadow: 0 2px 4px var(--color-shadow);
     padding: 20px;
-    margin: 10px;
 }
 .device-grid button{
     background-color: var(--text-light-color);
@@ -513,7 +511,7 @@ background-color: var(--primary-color-light-2); /* Warna badan scroller saat dih
         grid-template-columns: auto auto;
     }
     .device-grid button{
-        width: 170px;
+        width: 130px;
     }
 }
 @media (max-width:419px){
