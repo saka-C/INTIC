@@ -3,36 +3,32 @@
 html {
     scroll-behavior: smooth;
 }
-/* Style untuk scroller horizontal */
+
 html::-webkit-scrollbar{
-width: 12px; /* Lebar scroller */
-height: 12px; /* Tinggi scroller */
+width: 12px; 
+height: 12px; 
 }
 
-/* Style untuk badan scroller horizontal */
+
 html::-webkit-scrollbar-thumb {
-background-color: var(--primary-color-light-2); /* Warna badan scroller */
-border-radius: 6px; /* Bentuk badan scroller */
+background-color: var(--primary-color-light-2); 
+border-radius: 6px; 
 }
 
-/* Style untuk scroller vertikal */
+
 html::-webkit-scrollbar-vertical{
-width: 12px; /* Lebar scroller */
-height: 12px; /* Tinggi scroller */
+width: 12px; 
+height: 12px; 
 }
 
-/* Style untuk badan scroller vertikal */
 html::-webkit-scrollbar-thumb:vertical  {
-background-color: var(--primary-color-light-2); /* Warna badan scroller */
-border-radius: 6px; /* Bentuk badan scroller */
+background-color: var(--primary-color-light-2);
 }
 
-/* Style untuk scroller saat dihover */
 html::-webkit-scrollbar-thumb:hover{
-background-color: var(--primary-color-light-2); /* Warna badan scroller saat dihover */
+background-color: var(--primary-color-light-2); 
 }
 :root{
-    /* Color */
     --body-color: #fafdff;
     --text-light-color: #ffff;
     --primary-color: #4285F4;
@@ -52,7 +48,6 @@ background-color: var(--primary-color-light-2); /* Warna badan scroller saat dih
     --stroke-color: #ddd;
     --stroke-color-draken:#898989;
 
-    /* transition */
     --tran-01: all 0.1s ease;
     --tran-02: all 0.2s ease;
     --tran-03: all 0.3s ease;
@@ -376,13 +371,13 @@ nav{
 }
 
 .table-received tbody tr:hover {
-    background-color: #c5c5c5; /* Warna latar belakang saat baris dihover */
+    background-color: #c5c5c5; 
 }
 
 .table-received td,
 .table-complete td {
-    padding: 8px; /* Ruang dalam sel */
-    text-align: center; /* Pusatkan teks dalam sel */
+    padding: 8px; 
+    text-align: center; 
     font-weight: 500;
 }
 .table-received button{
@@ -396,48 +391,45 @@ nav{
     cursor: pointer;
 }
 
-/* Style untuk scroller horizontal */
 .table-received::-webkit-scrollbar,
 .table-complete::-webkit-scrollbar,
 .ticket-progress::-webkit-scrollbar,
 .table-self::-webkit-scrollbar {
-width: 12px; /* Lebar scroller */
-height: 12px; /* Tinggi scroller */
+width: 12px;
+height: 12px; 
 }
 
-/* Style untuk badan scroller horizontal */
+
 .table-received::-webkit-scrollbar-thumb,
 .table-complete::-webkit-scrollbar-thumb,
 .ticket-progress::-webkit-scrollbar-thumb,
 .table-self::-webkit-scrollbar-thumb {
-background-color: var(--primary-color-light-2); /* Warna badan scroller */
-border-radius: 6px; /* Bentuk badan scroller */
+background-color: var(--primary-color-light-2); 
+border-radius: 6px; 
 }
 
-/* Style untuk scroller vertikal */
+
 .table-received::-webkit-scrollbar-vertical,
 .table-complete::-webkit-scrollbar-vertical,
 .ticket-progress::-webkit-scrollbar-vertical,
 .table-self::-webkit-scrollbar-vertical {
-width: 12px; /* Lebar scroller */
-height: 12px; /* Tinggi scroller */
+width: 12px; 
+height: 12px; 
 }
 
-/* Style untuk badan scroller vertikal */
 .table-received::-webkit-scrollbar-thumb:vertical ,
 .table-complete::-webkit-scrollbar-thumb:vertical,
 .ticket-progress::-webkit-scrollbar-thumb:vertical,
 .table-self::-webkit-scrollbar-thumb:vertical{
-background-color: var(--primary-color-light-2); /* Warna badan scroller */
-border-radius: 6px; /* Bentuk badan scroller */
+background-color: var(--primary-color-light-2);
+border-radius: 6px; 
 }
 
-/* Style untuk scroller saat dihover */
 .table-received::-webkit-scrollbar-thumb:hover, 
 .table-complete::-webkit-scrollbar-thumb:hover,
 .ticket-progress::-webkit-scrollbar-thumb:hover,
 .table-self::-webkit-scrollbar-thumb:hover {
-background-color: var(--primary-color-light-2); /* Warna badan scroller saat dihover */
+background-color: var(--primary-color-light-2); 
 }
 
 .more{

@@ -103,7 +103,7 @@
                         </tr>
                         <tr>
                             <td>4</td>
-                            <td>Mahasiswa</td>
+                            <td>Mahasiswa</td>im
                             <td>Masalah Jaringan</td>
                         </tr>
                         <tr>
@@ -114,11 +114,62 @@
                     </tbody>
                 </table>
             </div>
-            <div class="antrian-image">
+            <div class="container-image">
                 <img src="asset/thumbnail2.png" alt="">
             </div>
         </div>
-
+        <div class="device-card">
+            <div class="container-image">
+                <p>Cek inventory dan spesifikasi device fakultas kamu hanya disini</p>
+                <span>Cek Spesifikasi Perangkat Fakultas</span>
+                <img src="asset/thumbnail3.png" alt="">
+            </div>
+            <div class="device-grid">
+                <button type="submit">
+                    <div class="inner-button">
+                        <img src="asset/pc.png" alt="">
+                        <span class="text-device">PC</span>
+                    </div>
+                </button>
+                <button type="submit">
+                    <div class="inner-button">
+                        <img src="asset/laptop.png" alt="">
+                        <span class="text-device">laptop</span>
+                    </div>
+                </button>
+                <button type="submit">
+                    <div class="inner-button">
+                        <img src="asset/printer.png" alt="">
+                        <span class="text-device">printer</span>
+                    </div>
+                </button>
+                <button type="submit">
+                    <div class="inner-button">
+                        <img src="asset/cctv.png" alt="">
+                        <span class="text-device">cctv</span>
+                    </div>
+                </button>   
+                <button type="submit">
+                    <div class="inner-button">
+                        <img src="asset/projector.png" alt="">
+                        <span class="text-device">projector</span>
+                    </div>
+                </button>   
+                <button type="submit">
+                    <div class="inner-button">
+                        <img src="asset/wifi.png" alt="">
+                        <span class="text-device">WIFI</span>
+                    </div>
+                </button>
+                <button type="submit">
+                    <div class="inner-button">
+                        <img src="asset/desktop.png" alt="">
+                        <span class="text-device">All in One PC</span>
+                    </div>
+                </button>  
+            </div>
+        </div>
+    </div>
 
 <div class="report-card-popup">
     <div class="report-card">
@@ -137,9 +188,10 @@
                 <option value="#">Device Mati</option>
                 <option value="#">Rusak</option>
             </select>
+            <label for="">Masukan diskripsi masalah</label>
             <textarea name="" id="" cols="30" rows="10"></textarea>
             <div class="btn-card-popup">
-                <button>Laporkan❗</button>
+                <button type="submit">Laporkan❗</button>
             </div>
 
         </form>
@@ -147,36 +199,6 @@
 </div>
 
 
-<div class="device-card-popup">
-    <div class="device-card">
-        <div class="top-popup">
-            <button class="btn-close" id="close-device-popup">&times;</button>
-        </div>
-        <div class="device-grid">
-            <button type="submit">
-                <img src="asset/desktop.png" alt="">
-                <span class="text-device">PC</span>
-            </button>
-            <button type="submit">
-                <img src="asset/laptop.png" alt="">
-                <span class="text-device">laptop</span>
-            </button>
-            <button type="submit">
-                <img src="asset/printer.png" alt="">
-                <span class="text-device">printer</span>
-            </button>
-            <button type="submit">
-                <img src="asset/cctv.png" alt="">
-                <span class="text-device">cctv</span>
-            </button>
-            <button type="submit">
-                <img src="asset/projector.png" alt="">
-                <span class="text-device">projector</span>
-            </button>
-                
-        </div>
-    </div>
-</div>
 
 <div class="ticket-card-popup">
     <div class="ticket-card">
@@ -204,19 +226,40 @@
     </div>
 </div>
 
+
+<footer>
+    <div class="logo-footer">
+        <img src="asset/logo-ui.png" alt="">
+        <p>|</p>
+        <span>Fakultas <span class="psiko">Psikologi</span></span>
+    </div>
+    <div class="content-footer">
+        <div class="contact">
+            <h4>Contact</h4>
+            <span><a href="#"><i class='bx bxl-whatsapp' ></i>Whatsapp</a></span>
+            <span><a href="#"><i class='bx bxs-phone-call' ></i>Phone Number</a></span>
+        </div>
+        <div class="about">
+            <h4>About</h4>
+            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, alias corrupti! Numquam, ratione laudantium. Ratione nihil consectetur dolorum voluptatum incidunt!</span>
+        </div>
+        <div class="social-media">
+            <h4>Social Media</h4>
+            <span><a href="#"><i class='bx bxl-instagram-alt' ></i>Instagram</a></span>
+            <span><a href="#"><i class='bx bxl-twitter'></i>X</a></span>
+        </div>
+    </div>
+</footer>
     </div>
 
 <!-- <script src="style/script.js"></script> -->
 <script>
     const Report = document.getElementById("report-popup");
     const Ticket = document.getElementById("ticket-popup");
-    const Device = document.getElementById("device-popup");
-    const reportPopup = document.querySelector(".report-card-popup");
     const ticketPopup = document.querySelector(".ticket-card-popup");
-    const devicePopup = document.querySelector(".device-card-popup");
+    const reportPopup = document.querySelector(".report-card-popup");
     const closeBtn1 = document.getElementById("close-report-popup");
-    const closeBtn2 = document.getElementById("close-device-popup");
-    const closeBtn3 = document.getElementById("close-ticket-popup");
+    const closeBtn2 = document.getElementById("close-ticket-popup");
 
     Report.addEventListener("click", () => {
     reportPopup.classList.add("active");
@@ -225,18 +268,12 @@
     Ticket.addEventListener("click", () => {
     ticketPopup.classList.add("active");
     });
-    Device.addEventListener("click", () => {
-    devicePopup.classList.add("active");
-    });
 
 
     closeBtn1.addEventListener("click",() =>{
     reportPopup.classList.remove("active");
     });
     closeBtn2.addEventListener("click",() =>{
-    devicePopup.classList.remove("active");
-    });
-    closeBtn3.addEventListener("click",() =>{
     ticketPopup.classList.remove("active");
     });
 </script>
