@@ -167,6 +167,26 @@ body{
 .garis button i{
     font-size: 50px;
 }
+.garis a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: var(--text-color);
+    background-color: var(--body-color);
+    width: 172px;
+    height: 172px;
+    border-radius: 30px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 15px;
+    border: none;
+    box-shadow: 0px 4px 4px 0px var(--color-shadow);
+}
+.garis a i{
+    font-size: 50px;
+}
 @media screen and (max-width: 760px){
     .text-header{
         width: 60%;
@@ -183,6 +203,10 @@ body{
         width: 142px;
         height: 142px;
     }
+    .garis a{
+        width: 142px;
+        height: 142px;
+    }
     .garis{
         height: 100px;
     }
@@ -192,6 +216,12 @@ body{
         gap: 20px;
     }
     .garis button{
+        border-radius: 15px;
+        width: 90px;
+        height: 90px;
+        font-size: 2vw;
+    }
+    .garis a{
         border-radius: 15px;
         width: 90px;
         height: 90px;
@@ -243,6 +273,7 @@ body{
     }
     .thumbnail-text{
         width: 100%;
+        padding: 10px;
     }
 }
 .antrian{
@@ -417,8 +448,16 @@ background-color: var(--primary-color-light-2); /* Warna badan scroller saat dih
     margin-left: 30px;
     margin-right: 30px;
     display: flex;
+    gap: 20px;
     justify-content: space-evenly;
     align-items: end;
+}
+@media screen and (max-width: 972px){
+    .device-card{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
 }
 .device-card .container-image{
     display: flex;
@@ -426,6 +465,11 @@ background-color: var(--primary-color-light-2); /* Warna badan scroller saat dih
     justify-content: center;
     align-items: end;
     text-align: end;
+}
+@media screen and (max-width: 500px){
+    .device-card .container-image{
+        text-align: center;
+    }
 }
 .device-card .container-image p{
     font-size: 15px;
@@ -448,6 +492,7 @@ background-color: var(--primary-color-light-2); /* Warna badan scroller saat dih
     border-radius: 10px;
     box-shadow: 0 2px 4px var(--color-shadow);
     padding: 20px;
+    margin: 10px;
 }
 .device-grid button{
     background-color: var(--text-light-color);
@@ -457,6 +502,24 @@ background-color: var(--primary-color-light-2); /* Warna badan scroller saat dih
     display: flex;
     justify-content: center;
     width: 150px;
+}
+@media (max-width:555px){
+    .device-grid button{
+        width: 120px;
+    }
+}
+@media (max-width:456px){
+    .device-card .device-grid{
+        grid-template-columns: auto auto;
+    }
+    .device-grid button{
+        width: 170px;
+    }
+}
+@media (max-width:419px){
+    .device-grid button{
+        width: 150px;
+    }
 }
 .device-grid button:hover{
     box-shadow: 0 2px 10px var(--primary-color);
@@ -473,7 +536,7 @@ background-color: var(--primary-color-light-2); /* Warna badan scroller saat dih
 }
 .device-grid button .inner-button{
     padding: 20px;
-    width: 90px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -623,6 +686,12 @@ footer{
     padding-top: 30px;
     margin-top: 50px;
 }
+@media screen and (max-width: 644px){
+    footer{
+        flex-direction: column;
+        gap: 40px;
+    }
+}
 .logo-footer{
     display: flex;
     align-items: center;
@@ -652,6 +721,11 @@ footer{
     display: flex;
     justify-content: start;
     gap: 50px;
+}
+@media (max-width:456px){
+    .content-footer{
+        flex-direction: column;
+    }
 }
 .content-footer span{
     font-size: 15px;

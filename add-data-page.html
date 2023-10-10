@@ -53,6 +53,13 @@
                 <label for="">Deskripsi</label>
                 <textarea name="" id="" cols="30" rows="5"></textarea>
             </div>
+            <div class="file-input">
+                <input type="file" id="inp-foto" accept="image/*" onchange="tampilkanPreview()">
+                <label for="foto-profil" class="file-label" id="label-plus">Foto Barang</label>
+                <div class="file-preview" id="preview-container">
+                  <img id="preview-image" alt="Preview">
+                </div>
+              </div>
         </div>
         <div class="card-form form-2">
             <div class="card-form-header">Spesifikasi Barang</div>

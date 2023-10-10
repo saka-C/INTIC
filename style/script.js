@@ -32,3 +32,30 @@ closeBtn.addEventListener("click",() =>{
 });
 
 
+// preview post
+function tampilkanPreview() {
+    const inputFoto = document.getElementById("inp-foto");
+    const labelPlus = document.getElementById("label-plus");
+    const previewContainer = document.getElementById("preview-container");
+    const previewImage = document.getElementById("preview-image");
+    if (inputFoto.files && inputFoto.files[0]) {
+      const reader = new FileReader();
+
+      reader.onload = function (e) {
+        previewImage.src = e.target.result;
+        previewContainer.style.display = "block";
+        labelPlus.style.display = "none";
+
+        // Menambahkan event listener pada gambar
+        previewImage.addEventListener("click", function() {
+          inputFoto.value = ""; // Mengatur ulang input file
+          previewContainer.style.display = "none";
+          labelPlus.style.display = "block";
+        });
+      };
+
+      reader.readAsDataURL(inputFoto.files[0]);
+    }
+  }
+
+
