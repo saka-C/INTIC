@@ -47,8 +47,8 @@
             </div>
             <div class="thumbnail-text">
                 <h2>Punya kendala Pada Device Kamu? Mau Ngecek Spesifikasi Perangkat Fakultas?</h2>
-                <p>Lorem ipsum dolor sit amet consectetur. Pellentesque elementum purus lectus lacinia. Quis gravida diam convallis nunc cursus ornare sem amet malesuada.</p>
-                <a href="erorpage.html">Selengkapnya..</a>
+                <p>Sekarang kamu bisa melaporkan kendala perangkat kamu dan akan langsung terhubung dengan Tim IT kami. dan juga kamu bisa mengecek spesifikasi perangkat di fakultasmu hanya disini.</p>
+                <a href="#about">Selengkapnya..</a>
             </div>
         </div>
         <div class="antrian">
@@ -228,28 +228,35 @@
 
 
 <footer>
-    <div class="logo-footer">
-        <img src="asset/logo-ui.png" alt="">
-        <p>|</p>
-        <span>Fakultas <span class="psiko">Psikologi</span></span>
+    <div class="footer-top">
+        <div class="logo-footer">
+            <img src="asset/logo-ui.png" alt="">
+            <p>|</p>
+            <span>Fakultas <span class="psiko">Psikologi</span></span>
+        </div>
+        <div class="content-footer">
+            <div class="contact">
+                <h4>Contact</h4>
+                <span><a href="#"><i class='bx bxl-whatsapp' ></i>Whatsapp</a></span>
+                <span><a href="#"><i class='bx bxs-phone-call' ></i>Phone Number</a></span>
+            </div>
+            <div class="social-media">
+                <h4>Social Media</h4>
+                <span><a href="#"><i class='bx bxl-instagram-alt' ></i>Instagram</a></span>
+                <span><a href="#"><i class='bx bxl-twitter'></i>X</a></span>
+            </div>
+        </div>
     </div>
-    <div class="content-footer">
-        <div class="contact">
-            <h4>Contact</h4>
-            <span><a href="#"><i class='bx bxl-whatsapp' ></i>Whatsapp</a></span>
-            <span><a href="#"><i class='bx bxs-phone-call' ></i>Phone Number</a></span>
-        </div>
-        <div class="about">
+    <div class="footer-bot">
+        <div class="about" id="about">
             <h4>About</h4>
-            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, alias corrupti! Numquam, ratione laudantium. Ratione nihil consectetur dolorum voluptatum incidunt!</span>
-        </div>
-        <div class="social-media">
-            <h4>Social Media</h4>
-            <span><a href="#"><i class='bx bxl-instagram-alt' ></i>Instagram</a></span>
-            <span><a href="#"><i class='bx bxl-twitter'></i>X</a></span>
+            <span>Web ini hadir untuk mempermudah para Tenaga pendidik, Mahasiswa, Dll. dalam membantu pelaporan masalah pada perangkatnya dengan praktis dan mudah. Dan terdapat semua data data perangkat fakultas berupa spesifikasi, lokasi, dan data lainnya yang bisa diakses oleh siapapun. <p>Gunakanlah dengan baik dan bijak sesuai dengan kebutuhannya.</p> Atas suportnya Terimakasih </span>
         </div>
     </div>
 </footer>
+<div class="copyright">
+    <p>&copy; 2023 Fakultas Psikologi Universitas Indonesia</p>
+</div>
     </div>
 
 <!-- <script src="style/script.js"></script> -->
@@ -270,12 +277,16 @@
     });
 
 
-    closeBtn1.addEventListener("click",() =>{
+    closeBtn1.addEventListener("click", (event) => {
+    event.preventDefault(); // Mencegah default behavior
     reportPopup.classList.remove("active");
     });
-    closeBtn2.addEventListener("click",() =>{
+
+    closeBtn2.addEventListener("click", (event) => {
+    event.preventDefault(); // Mencegah default behavior
     ticketPopup.classList.remove("active");
     });
+
 </script>
 </body>
 </html>
