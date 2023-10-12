@@ -47,6 +47,7 @@ background-color: var(--primary-color-light-2);
     --text-color: #292A2A;
     --stroke-color: #ddd;
     --stroke-color-draken:#898989;
+    --hover-table: #c5c5c5;
 
     --tran-01: all 0.1s ease;
     --tran-02: all 0.2s ease;
@@ -206,7 +207,7 @@ nav{
     .sidebar {
         width: 0px;
         background-color: var(--body-color);
-        color: #fff;
+        color: var(--text-light-color);
         padding: 20px;
         position: fixed;
         height: 100%;
@@ -246,6 +247,7 @@ nav{
     }
     .main-content{
         margin-left: 0px;
+        padding: 10px;
     }
 }
 .card-grid-top{
@@ -332,6 +334,14 @@ nav{
     .notification-container{
         flex-direction: column;
     }
+    
+}
+@media (max-width:500px){
+    .notification-container{
+        flex-direction: column;
+        padding: 5px;
+    }
+    
 }
 .recived-container,
 .complete-container{
@@ -371,7 +381,7 @@ nav{
 }
 
 .table-received tbody tr:hover {
-    background-color: #c5c5c5; 
+    background-color: var(--hover-table); 
 }
 
 .table-received td,
@@ -710,7 +720,7 @@ a{
 }
 
 .search-invent{
-    padding: 10px 20px;
+    padding: 10px ;
     width: 100%;
     display: flex;
     justify-content: end;
@@ -749,7 +759,7 @@ a{
         border: 2px solid var(--primary-color);
         outline: none;
         border-radius: 10px;
-        width: 80%;
+        width: 100%;
       }
 }
 .cateogry .print button{

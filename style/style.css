@@ -51,6 +51,7 @@ background-color: var(--primary-color-light-2);
     --stroke-color-draken:#898989;
     --footer-bg: #1f282e;
     --footer-color: #8995a1;
+    --hover-table: #c5c5c5;
 
     /* transition */
     --tran-01: all 0.1s ease;
@@ -86,6 +87,8 @@ body{
 }
 .navlink{
     padding: 20px;
+    display: flex;
+    align-items: center;
 }
 .navlink a{
     background-color: var(--primary-color);
@@ -94,6 +97,12 @@ body{
     text-decoration: none;
     padding: 10px 20px;
     border-radius: 20px;
+}
+.navlink #logout{
+    background: none;
+}
+.navlink #logout i{
+    margin-right: 5px;
 }
 .logo{
     display: flex;
@@ -320,7 +329,7 @@ body{
 
 .table-container tbody tr:hover {
     cursor: pointer;
-    background-color: #a0a0a0; /* Warna latar belakang saat baris dihover */
+    background-color: var(--hover-table); /* Warna latar belakang saat baris dihover */
 }
 
 .table-container td {
@@ -434,6 +443,7 @@ background-color: var(--primary-color-light-2); /* Warna badan scroller saat dih
 .report-card select{
     border: 2px solid var(--primary-color); 
     padding: 8px 20px;
+    background-color: var(--body-color);
     border-radius: 5px;
     margin-bottom: 10px;
 }
@@ -786,7 +796,6 @@ footer .about{
     width: 100%;
 }
 .copyright{
-    background-color: var(--body-color);
     text-align: center;
     font-size: 13px;
 }
