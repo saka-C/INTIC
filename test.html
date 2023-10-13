@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        /* Style autocomplete container */
+        .autocomplete-container {
+            position: relative;
+            display: inline-block;
+        }
+
+        /* Style the input field */
+        .autocomplete-input {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        /* Style the autocomplete dropdown container */
+        .autocomplete-dropdown {
+            position: absolute;
+            max-height: 150px;
+            overflow-y: auto;
+            border: 1px solid #ccc;
+            border-top: none;
+            border-radius: 0 0 5px 5px;
+            display: none;
+        }
+
+        /* Style individual autocomplete items */
+        .autocomplete-item {
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        /* Highlight the selected item */
+        .autocomplete-item:hover {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+
+<div class="autocomplete-container">
+    <input type="text" id="myInput" class="autocomplete-input" placeholder="Cari sesuatu...">
+    <div class="autocomplete-dropdown" id="myDropdown"></div>
+</div>
+
+<script>
+// Data untuk autocomplete
+var countries = ["Indonesia", "Malaysia", "Singapura", "Thailand", "Vietnam", "Filipina", "Brunei", "Myanmar"];
+
+// Mendapatkan elemen input dan dropdown
+var input = document.getElementById("myInput");
+var dropdown = document.getElementById("myDropdown");
+
+// Event listener untuk input
+input.addEventListener("input", function() {
+    var filter = input.value.toLowerCase();
+    dropdown.innerHTML = ""; // Kosongkan dropdown
+    if (filter) {
+        // Filter item yang sesuai
+        var filteredItems = countries.filter(function(item) {
+            return item.toLowerCase().includes(filter);
+        });
+
+        // Tambahkan item ke dropdown
+        filteredItems.forEach(function(item) {
+            var option = document.createElement("div");
+            option.className = "autocomplete-item";
+            option.textContent = item;
+            option.addEventListener("click", function() {
+                input.value = item; // Isi input dengan item yang dipilih
+                dropdown.style.display = "none"; // Sembunyikan dropdown
+            });
+            dropdown.appendChild(option);
+        }); 
+
+        // Tampilkan dropdown
+        dropdown.style.display = "block";
+    } else {
+        dropdown.style.display = "none"; // Sembunyikan dropdown jika input kosong
+    }
+});
+
+// Tutup dropdown jika klik di luar input
+document.addEventListener("click", function(e) {
+    if (e.target !== input && e.target !== dropdown) {
+        dropdown.style.display = "none";
+    }
+});
+
+</script>
+
+</body>
+</html>

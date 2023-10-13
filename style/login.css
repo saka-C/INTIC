@@ -94,6 +94,10 @@ input[type=text]:focus {
     border: 1px solid var(--primary-color);
     outline: none;
 }
+input[type=email]:focus {
+    border: 1px solid var(--primary-color);
+    outline: none;
+}
 input[type=password]:focus {
     border: 1px solid var(--primary-color);
     outline: none;
