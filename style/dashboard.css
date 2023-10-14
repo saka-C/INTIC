@@ -488,6 +488,7 @@ td.done-panding i{
     display: flex;
     gap: 10px;
     justify-content: center;
+    border-bottom: none;
 }
 button{
     cursor: pointer;
@@ -516,7 +517,6 @@ a{
 }
 .ticket-progress td{
     padding: 10px;
-    border-bottom: 1px solid var(--stroke-color);
     white-space: nowrap;
 }
 .ticket-progress button{
@@ -600,7 +600,85 @@ a{
     cursor: pointer;
     transition: var(--tran-05);
 }
+.table-ticketing .ticket-progress{
+    padding: 10px;
+    border-radius: 5px;
+    max-height: 200px;
+}
+.ticket-panding td{
+    background-color: var(--merah-color);
+}
+.ticket-panding .btn-acc-ticket,
+.ticket-panding .btn-acc-ticket span{
+    display: flex;
+    align-items: center;
+}
+.ticket-panding .btn-acc-ticket span{
+    color: var(--merah-dark-color);
+}
+.table-ticketing{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+.recived-container .table-top{
+    justify-content: start;
+}
+.table-ticketing .recived-container .table-top .top-title{
+    text-align: start;
+    width: 100%;
+}
+.table-ticketing .table-received {
+    border-radius: 0px 0px 5px 5px;
+}
+.table-ticketing .recived-container,
+.table-ticketing .complete-container{
+    background-color: var(--text-light-color);
+    border-radius: 5px;
+    box-shadow: 0 2px 4px var(--color-shadow);
+    padding: 10px;
+}
+.table-ticketing .complete-container{
+    display: flex;
+    gap: 20px;
+}
+.table-ticketing .complete-container .table-complete{
+    max-height: 300px;
+}
+.table-ticketing .wrapper{
+    width: 100%;
+}
+.table-ticketing .table-top{
+    background-color: var(--text-light-color);
+    border: 1px solid var(--stroke-color);
+    border-bottom: none;
+    border-radius: 5px 5px 0px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.table-ticketing .table-complete{
+    border-radius: 0px 0px 5px 5px;
+}
+div.top-title{
+    padding: 15px;
+}
+.table-ticketing .table-top .top-title{
+    font-weight: 700;
+    text-align: center;
+    width: 30%;
+}
+.bxs-star{
+    color: #E7B10A;
+}
+.feedback-btn button{
+    background: none;
+    border: none;
+    color: var(--primary-color);
+    text-decoration: underline;
 
+}
 /* ========== inventory CSS =========== */
 
 .add-data{
@@ -719,20 +797,20 @@ a{
     font-weight: 600;
 }
 
-.search-invent{
+.search{
     padding: 10px ;
     width: 100%;
     display: flex;
     justify-content: end;
     align-items: center;
 }
-.search-invent .icon-src {
+.search .icon-src {
     font-size: 15px;
     position: relative;
     left: 30px;
     top: 1px;
 }
-.search-invent input[type=text] {
+.search input[type=text] {
     width: 30%;
     padding: 5px 10px ;
     border-radius: 10px;
@@ -740,14 +818,14 @@ a{
     transition: var(--tran-03);
     padding-left: 35px;
   }
-.search-invent input[type=text]:focus {
+.search input[type=text]:focus {
     border: 2px solid var(--primary-color);
     outline: none;
     border-radius: 10px;
     width: 40%;
   }
 @media (max-width: 500px){
-    .search-invent input[type=text] {
+    .search input[type=text] {
         width: 70%;
         padding: 5px 10px ;
         border-radius: 10px;
@@ -755,7 +833,7 @@ a{
         transition: var(--tran-03);
         padding-left: 35px;
       }
-    .search-invent input[type=text]:focus {
+    .search input[type=text]:focus {
         border: 2px solid var(--primary-color);
         outline: none;
         border-radius: 10px;

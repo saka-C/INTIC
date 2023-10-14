@@ -224,6 +224,20 @@
                 </div>
             </div>
         </div>
+        <div class="botom-ticket">
+            <h4>Seberapa puas anda terhadap pelayanan ini?</h4>
+            <div class="star-feedback">
+                <button class="star"><i class='bx bxs-star'></i></button>
+                <button class="star"><i class='bx bxs-star'></i></button>
+                <button class="star"><i class='bx bxs-star'></i></button>
+                <button class="star"><i class='bx bxs-star'></i></button>
+                <button class="star"><i class='bx bxs-star'></i></button>
+            </div>
+            <textarea name="" id="" cols="30" rows="10" placeholder="Ceritakan kepuasan anda"></textarea>
+            <div class="btn-card-popup">
+                <button type="submit">Kirim</button>
+            </div>
+        </div>
     </div>
 </div>
 
@@ -287,7 +301,43 @@
     event.preventDefault(); // Mencegah default behavior
     ticketPopup.classList.remove("active");
     });
+</script>
+
+<script>
+    let stars = document.querySelectorAll('.star');
+        stars.forEach(function (e) {
+            e.addEventListener('click', function (event) {
+                let previousSiblings = [];
+                let currentElement = e;
+
+                // Mengambil previous sibling pertama dari elemen yang diklik
+                let previousSibling = e.previousElementSibling;
+
+                while (previousSibling) {
+                    previousSiblings.push(previousSibling);
+                    previousSibling = previousSibling.previousElementSibling;
+                }
+
+                previousSiblings.push(currentElement);
+
+                // Menghapus kelas "selected" dari semua elemen dengan kelas yang sama
+                stars.forEach(function (star) {
+                    if (star != currentElement) {
+                        star.classList.remove('selected');
+                    }
+                });
+
+                // Menambahkan kelas "selected" ke semua elemen yang dipilih
+                previousSiblings.forEach(function (element) {
+                    element.classList.add('selected');
+                });
+
+                console.log("Elemen yang dipilih dan previous siblings:");
+                console.log(previousSiblings);
+            });
+        });
 
 </script>
+
 </body>
 </html>

@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./asset/logo-neo1.png" type="image/x-icon">
+    <link rel="stylesheet" href="./style/dashboard.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <title>Ticketing Dashboard</title>
+</head>
+<body>
+    <div class="container">
+<div class="sidebar">
+    <button class="hamburger" id="hamburger">☰</button>
+    <div class="logo">
+        <img src="asset/logo-ui.png" alt="">
+    </div>
+    <nav>
+        <a href="dashboard.html"><i class='bx bxs-tachometer'></i><span>Dashboard</span></a>
+        <a href="inventory.html"><i class='bx bxs-folder-plus'></i><span>Add Inventory</span></a>
+        <a href="ticketing.html"><i class='bx bxs-detail'></i><span>Ticketing</span></a>
+        <a href="index.html"><i class='bx bxs-home'></i><span>Home</span></a>
+    </nav>
+    <div class="bottom-nav">
+        <a href="#" ><i class='bx bx-log-out icon' ></i><span>Logout</span></a>
+    </div>
+</div>
+</div>
+<div class="switch-mobile ">
+    <div class="main-content">
+        <h1>Ticketing</h1>
+<div class="table-ticketing">
+    <div class="ticket-progress">
+        <h2>Ticket Handle it</h2>
+        <table>
+            <tbody>
+                <tr>
+                    <td>32168</td>
+                    <td>Dosen</td>
+                    <td>Shaka Aufa</td>
+                    <td>Masalah Jaringan</td>
+                    <td>A-101</td>
+                    <td class="btn-acc-ticket">
+                        <button id="finish">Finish</button>
+                        <button id="view-ticket">View</button>
+                        <button id="panding-btn">Panding</button>
+                    </td>
+                </tr>
+
+                <tr class="ticket-panding">
+                    <td>32168</td>
+                    <td>Dosen</td>
+                    <td>Shaka Aufa</td>
+                    <td>Masalah Jaringan</td>
+                    <td>A-101</td>
+                    <td class="btn-acc-ticket">
+                        <span><i class='bx bx-time-five' ></i>Panding</span>
+                        <button id="finish">Finish</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>32168</td>
+                    <td>Dosen</td>
+                    <td>Shaka Aufa</td>
+                    <td>Masalah Jaringan</td>
+                    <td>A-101</td>
+                    <td class="btn-acc-ticket">
+                        <button id="finish">Finish</button>
+                        <button id="view-ticket">View</button>
+                        <button id="panding-btn">Panding</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>32168</td>
+                    <td>Dosen</td>
+                    <td>Shaka Aufa</td>
+                    <td>Masalah Jaringan</td>
+                    <td>A-101</td>
+                    <td class="btn-acc-ticket">
+                        <button id="finish">Finish</button>
+                        <button id="view-ticket">View</button>
+                        <button id="panding-btn">Panding</button>
+                    </td>
+                </tr>
+
+                <tr class="ticket-panding">
+                    <td>32168</td>
+                    <td>Dosen</td>
+                    <td>Shaka Aufa</td>
+                    <td>Masalah Jaringan</td>
+                    <td>A-101</td>
+                    <td class="btn-acc-ticket">
+                        <span><i class='bx bx-time-five' ></i>Panding</span>
+                        <button id="finish">Finish</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>32168</td>
+                    <td>Dosen</td>
+                    <td>Shaka Aufa</td>
+                    <td>Masalah Jaringan</td>
+                    <td>A-101</td>
+                    <td class="btn-acc-ticket">
+                        <button id="finish">Finish</button>
+                        <button id="view-ticket">View</button>
+                        <button id="panding-btn">Panding</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>32168</td>
+                    <td>Dosen</td>
+                    <td>Shaka Aufa</td>
+                    <td>Masalah Jaringan</td>
+                    <td>A-101</td>
+                    <td class="btn-acc-ticket">
+                        <button id="finish">Finish</button>
+                        <button id="view-ticket">View</button>
+                        <button id="panding-btn">Panding</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="recived-container">
+        <div class="table-top">
+            <div class="top-title">Received Ticket</div>
+        </div>
+        <div class="table-received">
+            <table>
+                <thead>
+                    <tr>
+                        <th>No.</th>
+                        <th>ID</th>
+                        <th>Status</th>
+                        <th>Problem</th>
+                        <th>Location</th>
+                        <th>Date</th>
+                        <th>Times</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>34666346</td>
+                        <td>Dosen</td>
+                        <td>Masalah Jaringan</td>
+                        <td>A102</td>
+                        <td>20/10/2023</td>
+                        <td>10:09</td>
+                        <td>
+                            <button>Handle</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>34666346</td>
+                        <td>Karyawan</td>
+                        <td>Masalah Jaringan</td>
+                        <td>A102</td>
+                        <td>20/10/2023</td>
+                        <td>10:09</td>
+                        <td>
+                            <button>Handle</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>34666346</td>
+                        <td>Mahasiswa</td>
+                        <td>Masalah Jaringan</td>
+                        <td>A102</td>
+                        <td>20/10/2023</td>
+                        <td>10:09</td>
+                        <td>
+                            <button>Handle</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>34666346</td>
+                        <td>Mahasiswa</td>
+                        <td>Masalah Jaringan</td>
+                        <td>A102</td>
+                        <td>20/10/2023</td>
+                        <td>10:09</td>
+                        <td>
+                            <button>Handle</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>34666346</td>
+                        <td>Mahasiswa</td>
+                        <td>Masalah Jaringan</td>
+                        <td>A102</td>
+                        <td>20/10/2023</td>
+                        <td>10:09</td>
+                        <td>
+                            <button>Handle</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>34666346</td>
+                        <td>Mahasiswa</td>
+                        <td>Masalah Jaringan</td>
+                        <td>A102</td>
+                        <td>20/10/2023</td>
+                        <td>10:09</td>
+                        <td>
+                            <button>Handle</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>34666346</td>
+                        <td>Mahasiswa</td>
+                        <td>Masalah Jaringan</td>
+                        <td>A102</td>
+                        <td>20/10/2023</td>
+                        <td>10:09</td>
+                        <td>
+                            <button>Handle</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>34666346</td>
+                        <td>Mahasiswa</td>
+                        <td>Masalah Jaringan</td>
+                        <td>A102</td>
+                        <td>20/10/2023</td>
+                        <td>10:09</td>
+                        <td>
+                            <button>Handle</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>34666346</td>
+                        <td>Mahasiswa</td>
+                        <td>Masalah Jaringan</td>
+                        <td>A102</td>
+                        <td>20/10/2023</td>
+                        <td>10:09</td>
+                        <td>
+                            <button>Handle</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="complete-container">
+        <div class="wrapper">
+            <div class="table-top">
+                <div class="top-title">Progress Ticket</div>
+            </div>
+            <div class="table-complete">
+                <table>
+                    <tbody>
+                        <tr id="panding">
+                            <td>12468</td>
+                            <td>Dosen</td>
+                            <td>Masalah Jaringan</td>
+                            <td class="done-panding"><i class='bx bx-time-five' ></i>Panding</td>
+                        </tr>
+                        <tr id="waiting-progress">
+                            <td>564398</td>
+                            <td>Karyawan</td>
+                            <td>Masalah Jaringan</td>
+                            <td class="done-panding"><i class='bx bxs-hourglass'></i>Progress</td>
+                        </tr>
+                        <tr id="waiting-progress">
+                            <td>0273487</td>
+                            <td>Karyawan</td>
+                            <td>Masalah Jaringan</td>
+                            <td class="done-panding"><i class='bx bxs-hourglass'></i>Progress</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+
+        <div class="wrapper">
+            <div class="table-top">
+                <span class="top-title">Done Ticket</span>
+                <div class="search">
+                    <span class="icon-src"><i class='bx bx-search'></i></span>
+                    <input type="text" name="" id="">
+                </div>
+            </div>
+            <div class="table-complete">
+                <table>
+                    <tbody>
+                        <tr id="done">
+                            <td>62348</td>
+                            <td>Karyawan</td>
+                            <td>Masalah Jaringan</td>
+                            <td class="done-panding"><i class='bx bxs-badge-check'></i>Done</td>
+                            <td class="star"><i class='bx bxs-star'></i>1</td>
+                            <td class="feedback-btn"><button>see feedback</button></td>
+                        </tr>
+                        <tr id="done">
+                            <td>3632815</td>
+                            <td>Karyawan</td>
+                            <td>Masalah Jaringan</td>
+                            <td class="done-panding"><i class='bx bxs-badge-check'></i>Done</td>
+                            <td class="star"><i class='bx bxs-star'></i>4</td>
+                            <td class="feedback-btn"><button>see feedback</button></td>
+                        </tr>
+                        <tr id="done">
+                            <td>624869</td>
+                            <td>Karyawan</td>
+                            <td>Masalah Jaringan</td>
+                            <td class="done-panding"><i class='bx bxs-badge-check'></i>Done</td>
+                            <td class="star"><i class='bx bxs-star'></i>5</td>
+                            <td class="feedback-btn"><button>see feedback</button></td>
+                        </tr>
+                        <tr id="done">
+                            <td>923903</td>
+                            <td>Karyawan</td>
+                            <td>Masalah Jaringan</td>
+                            <td class="done-panding"><i class='bx bxs-badge-check'></i>Done</td>
+                            <td class="star"><i class='bx bxs-star'></i>2</td>
+                            <td class="feedback-btn"><button>see feedback</button></td>
+                        </tr>
+                        <tr id="done">
+                            <td>98705</td>
+                            <td>Karyawan</td>
+                            <td>Masalah Jaringan</td>
+                            <td class="done-panding"><i class='bx bxs-badge-check'></i>Done</td>
+                            <td class="star"><i class='bx bxs-star'></i>2</td>
+                            <td class="feedback-btn"><button>see feedback</button></td>
+                        </tr>
+                        <tr id="done">
+                            <td>98705</td>
+                            <td>Karyawan</td>
+                            <td>Masalah Jaringan</td>
+                            <td class="done-panding"><i class='bx bxs-badge-check'></i>Done</td>
+                            <td class="star"><i class='bx bxs-star'></i>2</td>
+                            <td class="feedback-btn"><button>see feedback</button></td>
+                        </tr>
+                        <tr id="done">
+                            <td>98705</td>
+                            <td>Karyawan</td>
+                            <td>Masalah Jaringan</td>
+                            <td class="done-panding"><i class='bx bxs-badge-check'></i>Done</td>
+                            <td class="star"><i class='bx bxs-star'></i>2</td>
+                            <td class="feedback-btn"><button>see feedback</button></td>
+                        </tr>
+                        <tr id="done">
+                            <td>98705</td>
+                            <td>Karyawan</td>
+                            <td>Masalah Jaringan</td>
+                            <td class="done-panding"><i class='bx bxs-badge-check'></i>Done</td>
+                            <td class="star"><i class='bx bxs-star'></i>2</td>
+                            <td class="feedback-btn"><button>see feedback</button></td>
+                        </tr>
+                        <tr id="done">
+                            <td>98705</td>
+                            <td>Karyawan</td>
+                            <td>Masalah Jaringan</td>
+                            <td class="done-panding"><i class='bx bxs-badge-check'></i>Done</td>
+                            <td class="star"><i class='bx bxs-star'></i>2</td>
+                            <td class="feedback-btn"><button>see feedback</button></td>
+                        </tr>
+                        <tr id="done">
+                            <td>98705</td>
+                            <td>Karyawan</td>
+                            <td>Masalah Jaringan</td>
+                            <td class="done-panding"><i class='bx bxs-badge-check'></i>Done</td>
+                            <td class="star"><i class='bx bxs-star'></i>2</td>
+                            <td class="feedback-btn"><button>see feedback</button></td>
+                        </tr>
+                        <tr id="done">
+                            <td>98705</td>
+                            <td>Karyawan</td>
+                            <td>Masalah Jaringan</td>
+                            <td class="done-panding"><i class='bx bxs-badge-check'></i>Done</td>
+                            <td class="star"><i class='bx bxs-star'></i>2</td>
+                            <td class="feedback-btn"><button>see feedback</button></td>
+                        </tr>
+    
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+    </div>
+
+
+<div class="view-popup">
+    <div class="view-popup-content">
+        <div class="info-container">
+            <div class="info">
+                <span class="id">ID:</span>
+                <span class="profession">Profession:</span>
+                <span class="name">Name:</span>
+                <span class="problem">Problem:</span>
+                <span class="location">Location:</span>
+                <span class="desc">Desc:</span>
+            </div>
+            <div class="info value">
+                <span class="id">011223-A102-1</span>
+                <span class="profession">Dosen</span>
+                <span class="name">John Dae</span>
+                <span class="problem">Masalah Jaringan</span>
+                <span class="location">A102</span>
+                <span class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem omnis sed possimus minima quas nobis  optio vitae inventore est facere.</span>
+            </div>
+        </div>
+        <span id="close-view-popup">&times;</span>
+    </div>
+</div>
+
+<!-- ============= end main ============== -->
+        </div>
+    </div>
+</div>
+
+
+<script src="style/script.js"></script>
+
+</body>
+</html>
