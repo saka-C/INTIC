@@ -466,7 +466,7 @@ background-color: var(--primary-color-light-2); /* Warna badan scroller saat dih
 .report-card textarea:focus,
 .botom-ticket textarea:focus {
     outline: none;
-    height: 80px;
+    height: 70px;
 }
 
 .device-card{
