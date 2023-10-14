@@ -604,6 +604,7 @@ a{
     padding: 10px;
     border-radius: 5px;
     max-height: 200px;
+    font-size: 13px;
 }
 .ticket-panding td{
     background-color: var(--merah-color);
@@ -642,6 +643,11 @@ a{
 .table-ticketing .complete-container{
     display: flex;
     gap: 20px;
+}
+@media (max-width: 965px){
+    .table-ticketing .complete-container{
+        flex-direction: column;
+    }
 }
 .table-ticketing .complete-container .table-complete{
     max-height: 300px;
